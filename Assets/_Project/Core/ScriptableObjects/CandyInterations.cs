@@ -16,11 +16,11 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private GameObject _giveBaglocation;
     [SerializeField]
-    private bool _isMonsterCandy; // Add this line
+    private bool _isMonsterCandy;
     private Vector3 _startingPosition;
     private Camera _mainCamera;
     private Vector3 _velocity = Vector3.zero;
-    private PointsTimer _pointsTimer; // Add this line
+    private PointsTimer _pointsTimer; 
 
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Awake()
@@ -29,7 +29,7 @@ public class CandyInterations : MonoBehaviour
         _mainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
-        _pointsTimer = FindObjectOfType<PointsTimer>(); // Add this line
+        _pointsTimer = FindObjectOfType<PointsTimer>();
 
     }
 
@@ -70,8 +70,8 @@ public class CandyInterations : MonoBehaviour
             if (_giveBaglocation != null)
             {
                 Destroy(_giveBaglocation);
-                _pointsTimer.OnOptionSelected(); // Add this line
-                if (_isMonsterCandy) // Add this line
+                _pointsTimer.OnOptionSelected(); 
+                if (_isMonsterCandy)
                 {
                     Debug.Log("The candy bag was destroyed by the monster candy.");
                 }

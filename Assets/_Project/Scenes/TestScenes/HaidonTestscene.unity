@@ -238,6 +238,53 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &926193695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926193697}
+  - component: {fileID: 926193696}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &926193696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926193695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbc5d987f014ce4a9886e72be505146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPoints: 1000
+  points: 0
+  decreaseRate: 1
+--- !u!4 &926193697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926193695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.011, y: 0.751, z: -8.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051533001
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,11 +297,12 @@ GameObject:
   - component: {fileID: 1051533004}
   - component: {fileID: 1051533003}
   - component: {fileID: 1051533002}
-  - component: {fileID: 1051533006}
   - component: {fileID: 1051533007}
+  - component: {fileID: 1051533009}
+  - component: {fileID: 1051533010}
   m_Layer: 0
   m_Name: HumanCandy
-  m_TagString: Player
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,22 +385,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1051533006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051533001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed89ed5a7cb2e74c9c25e1791654042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainCam: {fileID: 1217032065}
-  _giveBaglocation: {fileID: 1308065692}
-  _isMoveable: 1
-  _ismonsterCandy: 0
 --- !u!54 &1051533007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -369,6 +401,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 2
+--- !u!114 &1051533009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051533001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 277426526ebfb0a4a94b2f90e2dfd2a1,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ab8e2fa2-8484-4e95-a696-ac11f2a77ccd
+    m_ActionName: Mouse/Mouse over[/Mouse/leftButton,/Mouse/position]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Mouse
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1217032065}
+--- !u!114 &1051533010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051533001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e7852cb984d454c99b811d57cc763c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d593890d-c0d3-4333-8841-98738280f0d7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c142c2e3-62b8-4c93-a494-ae4cd967c027
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  _mouseDragPhysicsSpeed: 10
+  _mouseDragSpeed: 0.1
+  _giveBaglocation: {fileID: 1308065692}
+  _isMonsterCandy: 0
 --- !u!1 &1147956381
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +782,7 @@ GameObject:
   - component: {fileID: 1338828203}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -699,14 +799,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4327aa291e7eb14f9300b31f6a34ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: 0
-  _mainCam: {fileID: 1217032065}
   _gameObject: {fileID: 1338828202}
   _isOpenable: 1
-  _interactionScript:
-  - {fileID: 1964504419}
-  - {fileID: 1051533006}
-  _shake: {fileID: 1217032068}
+  _mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6ce613cc-c9c5-4193-aafd-e5a65237d18f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!65 &1338828204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -896,32 +999,15 @@ GameObject:
   - component: {fileID: 1964504422}
   - component: {fileID: 1964504421}
   - component: {fileID: 1964504420}
-  - component: {fileID: 1964504419}
   - component: {fileID: 1964504426}
-  - component: {fileID: 1964504425}
+  - component: {fileID: 1964504427}
   m_Layer: 0
   m_Name: MonsterCandy
-  m_TagString: Player
+  m_TagString: Candy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1964504419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964504418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed89ed5a7cb2e74c9c25e1791654042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainCam: {fileID: 1217032065}
-  _giveBaglocation: {fileID: 1308065692}
-  _isMoveable: 1
-  _ismonsterCandy: 1
 --- !u!54 &1964504420
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1016,18 +1102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1964504425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964504418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc2ba5cd425191646913bae5a399afea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1964504426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,9 +1130,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1964504425}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MovementBehaviourScript, Assembly-CSharp
-        m_MethodName: OnMove
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1067,7 +1141,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 0
     m_ActionId: ab8e2fa2-8484-4e95-a696-ac11f2a77ccd
     m_ActionName: Mouse/Mouse over[/Mouse/leftButton,/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
@@ -1075,3 +1149,36 @@ MonoBehaviour:
   m_DefaultActionMap: Mouse
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1217032065}
+--- !u!114 &1964504427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964504418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e7852cb984d454c99b811d57cc763c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d593890d-c0d3-4333-8841-98738280f0d7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c142c2e3-62b8-4c93-a494-ae4cd967c027
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  _mouseDragPhysicsSpeed: 3.63
+  _mouseDragSpeed: -0.98
+  _giveBaglocation: {fileID: 1308065692}
+  _isMonsterCandy: 1

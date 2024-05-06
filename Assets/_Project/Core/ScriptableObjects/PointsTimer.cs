@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PointsTimer : MonoBehaviour
 {
-    public float maxPoints = 1000f; // Maximum points
-    public float points; // Current points
-    public float decreaseRate = 1f; // Points decrease rate per second
+    // Maximum points
+    public float maxPoints = 1000f;
+    // Current points
+    public float points;
+    // Points decrease rate per second
+    public float decreaseRate = 1f; 
 
     void Start()
     {
@@ -18,8 +21,10 @@ public class PointsTimer : MonoBehaviour
     {
         while (points > 0)
         {
-            yield return new WaitForSeconds(1f); // Wait for 1 second
-            points -= decreaseRate; // Decrease points
+            // Wait for 1 second
+            yield return new WaitForSeconds(1f);
+            // Decrease points
+            points -= decreaseRate; 
         }
     }
 

@@ -11,21 +11,21 @@ public class DoorInteractionScript : MonoBehaviour
     [SerializeField]
     private bool _isOpenable = true;
     [SerializeField]
-    private InputAction _mouseClick; // Define the InputAction
+    private InputAction _mouseClick; 
 
     private void Awake()
     {
-        _mouseClick = new InputAction(binding: "<Mouse>/leftButton"); // Initialize the InputAction
+        _mouseClick = new InputAction(binding: "<Mouse>/leftButton"); 
     }
 
     private void OnEnable()
     {
-        _mouseClick.Enable(); // Enable the InputAction
+        _mouseClick.Enable(); 
     }
 
     private void OnDisable()
     {
-        _mouseClick.Disable(); // Disable the InputAction
+        _mouseClick.Disable(); 
     }
 
     private void Update()
@@ -52,7 +52,7 @@ public class DoorInteractionScript : MonoBehaviour
                     {
                         // Close the door
                         _gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
-                        _isOpenable = true;
+
                     }
                 }
             }
