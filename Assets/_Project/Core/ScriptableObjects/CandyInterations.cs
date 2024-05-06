@@ -16,12 +16,25 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private GameObject _giveBaglocation;
     [SerializeField]
+    private DoorInteractionScript _doorInteraction;
+    [SerializeField]
     private bool _isMonsterCandy;
     private Vector3 _startingPosition;
     private Camera _mainCamera;
     private Vector3 _velocity = Vector3.zero;
-    private PointsTimer _pointsTimer; 
-
+    private PointsTimer _pointsTimer;
+    private float _monsterCandyCount = 0;
+    private float _humanCandyCount = 0;
+    public float MonsterCandy 
+    {
+        get { return _monsterCandyCount; }
+        set { _monsterCandyCount = value; }
+    }
+    public float HumanCandy
+    {
+        get { return _humanCandyCount; }
+        set { _humanCandyCount = value; }
+    }
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Awake()
     {
@@ -67,17 +80,24 @@ public class CandyInterations : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
-            if (_giveBaglocation != null)
+            if (_giveBaglocation != null && _rigidbody.useGravity)
             {
-                Destroy(_giveBaglocation);
-                _pointsTimer.OnOptionSelected(); 
+                _doorInteraction.DestroyCandyBag();
+                // add a check for if the child is a monster or human and if the right candy is
                 if (_isMonsterCandy)
                 {
-                    Debug.Log("The candy bag was destroyed by the monster candy.");
+                    _pointsTimer.OnOptionSelected();
+                    Debug.Log("You gave the child monster candy.");
+                    MonsterCandy += 1;
+                    Debug.Log(_monsterCandyCount);
+
                 }
                 else
                 {
+                    _pointsTimer.OnOptionSelected();
                     Debug.Log("The candy bag was not destroyed by the monster candy.");
+                    HumanCandy += 1;
+                    Debug.Log(_humanCandyCount);
                 }
             }
             else

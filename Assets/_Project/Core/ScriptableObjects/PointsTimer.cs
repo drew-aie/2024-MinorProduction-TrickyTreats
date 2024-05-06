@@ -1,34 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PointsTimer : MonoBehaviour
 {
     // Maximum points
-    public float maxPoints = 1000f;
-    // Current points
-    public float points;
+    private float maxPoints = 1000f;
+    // total points
+    private float globalpoints;
+    private float localpoints;
     // Points decrease rate per second
-    public float decreaseRate = 1f; 
-
-    void Start()
+    private float decreaseRate = 1f;
+    [SerializeField]
+    private CandyInterations _human;
+    [SerializeField]
+    private CandyInterations _monster;
+    [SerializeField]
+    private float maxkids = 10;
+    private float totalgivencandy;
+    private void Start()
     {
-        points = maxPoints;
+        localpoints = maxPoints;
         StartCoroutine(DecreasePointsOverTime());
     }
 
     IEnumerator DecreasePointsOverTime()
     {
-        while (points > 0)
+        totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
+        Debug.Log(_monster.MonsterCandy);
+        Debug.Log(_human.HumanCandy);
+        while (localpoints > 0 && totalgivencandy < maxkids)
         {
             // Wait for 1 second
             yield return new WaitForSeconds(1f);
             // Decrease points
-            points -= decreaseRate; 
+            localpoints -= decreaseRate;
+
         }
     }
 
-    public void StopDecreasingPoints()
+    private void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
     }
@@ -37,6 +49,9 @@ public class PointsTimer : MonoBehaviour
     {
         // Call this function when an option is selected
         StopDecreasingPoints();
-        Debug.Log("Points: " + points);
+        globalpoints += localpoints;
+        Debug.Log("Points: " + globalpoints);
+        localpoints = maxPoints;
+        Debug.Log(totalgivencandy);
     }
 }

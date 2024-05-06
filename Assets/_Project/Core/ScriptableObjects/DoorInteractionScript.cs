@@ -7,55 +7,77 @@ using UnityEngine.InputSystem;
 public class DoorInteractionScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _gameObject;
+    private GameObject _door;
     [SerializeField]
-    private bool _isOpenable = true;
+    private bool _isOpen = false;
     [SerializeField]
-    private InputAction _mouseClick; 
-
+    private InputAction _mouseClick;
+    [SerializeField]
+    private GameObject _candyBagPrefab;
+    private GameObject _currentCandyBag;
+    private bool _isBagDestroyed = false;
+    private Camera _mainCamera;
     private void Awake()
     {
-        _mouseClick = new InputAction(binding: "<Mouse>/leftButton"); 
+        _mainCamera = Camera.main;
+        _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
+        _currentCandyBag = Instantiate(_candyBagPrefab);
+        _currentCandyBag.SetActive(false);
     }
 
     private void OnEnable()
     {
-        _mouseClick.Enable(); 
+        _mouseClick.Enable();
     }
 
     private void OnDisable()
     {
-        _mouseClick.Disable(); 
+        _mouseClick.Disable();
     }
 
     private void Update()
     {
-        if (_mouseClick.triggered)
+
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+
+            if (hit.collider.gameObject == _door)
             {
-                if (hit.collider.gameObject == _gameObject)
+
+                if (!_isOpen && !_currentCandyBag.activeSelf && _mouseClick.triggered)
                 {
-                    // Check if the CandyBag GameObject exists in the scene
-                    GameObject candyBag = GameObject.FindGameObjectWithTag("Finish");
-
-                    // Only allow the door to open if _isOpenable is true and the CandyBag GameObject does not exist
-                    if (_isOpenable && candyBag != null)
-                    {
-                        // Open the door
-                        _gameObject.transform.DORotate(new Vector3(0, -90, 0), 1);
-                    }
-                    // Allow the door to close if _isOpenable is false and the mouse button is pressed
-                    else if (_isOpenable && candyBag == null)
-                    {
-                        // Close the door
-                        _gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
-
-                    }
+                    // Open the door
+                    _door.transform.DORotate(new Vector3(0, -90, 0), 1);
+                    // Spawn a new candy bag
+                    _currentCandyBag.SetActive(true);
+                    _isBagDestroyed = false;
+                    _isOpen = true;
                 }
+                
             }
+
         }
+        else if (_isBagDestroyed && _isOpen)
+        {
+            // Close the door
+            _door.transform.DORotate(new Vector3(0, 0, 0), 1, RotateMode.Fast);
+            _mainCamera.GetComponent<CameraShake>().AddTrauma(.8f);
+
+            _isBagDestroyed = false;
+            _isOpen = false;
+
+        }
+    }
+
+    public void DestroyCandyBag()
+    {
+        // Destroy the current candy bag
+        _currentCandyBag.SetActive(false);
+
+        //Destroy(_currentCandyBag);
+        //_currentCandyBag = null;
+        _isBagDestroyed = true;
     }
 }
