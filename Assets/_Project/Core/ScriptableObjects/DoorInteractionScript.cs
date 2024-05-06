@@ -2,59 +2,60 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DoorInteractionScript : MonoBehaviour
 {
-    private float _Angle;
-    [SerializeField]
-    private float _target;
-    private float _camDistance;
-    [SerializeField]
-    private Camera _mainCam;
     [SerializeField]
     private GameObject _gameObject;
     [SerializeField]
     private bool _isOpenable = true;
     [SerializeField]
-    private Interactionscript[] _interactionScript;
-    [SerializeField]
-    private CameraShake _shake;
-    // Start is called before the first frame update
-    void Start()
+    private InputAction _mouseClick; // Define the InputAction
+
+    private void Awake()
     {
-        
+        _mouseClick = new InputAction(binding: "<Mouse>/leftButton"); // Initialize the InputAction
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-
+        _mouseClick.Enable(); // Enable the InputAction
     }
 
-    private void OnMouseOver()
+    private void OnDisable()
     {
+        _mouseClick.Disable(); // Disable the InputAction
+    }
 
-        if (_isOpenable == true && Input.GetMouseButtonDown(0))
+    private void Update()
+    {
+        if (_mouseClick.triggered)
         {
-            _shake.enabled = true;
-            _shake.AddTrauma(.3f);
-            _gameObject.transform.DORotate(new Vector3(0, -90, 0), 1, RotateMode.Fast);
-            //_gameObject.transform.DOShakeScale(10, .5f, 10, 54, true, ShakeRandomnessMode.Harmonic);
-            _isOpenable = false;
-        }
-        else if (_isOpenable == false && Input.GetMouseButtonDown(0))
-        {
-            for (int i = 0; i < _interactionScript.Length; i++)
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-                if (_interactionScript[i].Moveable == false && Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject == _gameObject)
                 {
-                    _gameObject.transform.DORotate(new Vector3(0, -90, 0), 1, RotateMode.Fast);
-                    _isOpenable = true;
+                    // Check if the CandyBag GameObject exists in the scene
+                    GameObject candyBag = GameObject.FindGameObjectWithTag("Finish");
+
+                    // Only allow the door to open if _isOpenable is true and the CandyBag GameObject does not exist
+                    if (_isOpenable && candyBag != null)
+                    {
+                        // Open the door
+                        _gameObject.transform.DORotate(new Vector3(0, -90, 0), 1);
+                    }
+                    // Allow the door to close if _isOpenable is false and the mouse button is pressed
+                    else if (_isOpenable && candyBag == null)
+                    {
+                        // Close the door
+                        _gameObject.transform.DORotate(new Vector3(0, 0, 0), 1);
+                        _isOpenable = true;
+                    }
                 }
             }
-
         }
-        _shake.enabled = false;
-
     }
 }
