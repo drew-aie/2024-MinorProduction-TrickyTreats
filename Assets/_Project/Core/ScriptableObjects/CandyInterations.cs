@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class CandyInterations : MonoBehaviour
 {
-    [SerializeField]
+
     private InputAction _mouseClick;
     private Rigidbody _rigidbody;
     [SerializeField]
@@ -21,10 +21,12 @@ public class CandyInterations : MonoBehaviour
     private bool _isMonsterCandy;
     private Vector3 _startingPosition;
     private Camera _mainCamera;
-    private Vector3 _velocity = Vector3.zero;
+    private Vector3 _velocity;
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
+    private ChildInteractions _childInteractions;
+    private Interactionscript _interactionscript;
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -35,21 +37,28 @@ public class CandyInterations : MonoBehaviour
         get { return _humanCandyCount; }
         set { _humanCandyCount = value; }
     }
+    public bool IsMonster
+    {
+        get { return _isMonsterCandy; }
+    }
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Awake()
     {
-
+        _interactionscript = FindObjectOfType<Interactionscript>();
+        _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
+        _velocity = Vector3.zero;
         _mainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
         _pointsTimer = FindObjectOfType<PointsTimer>();
-
+        _childInteractions = FindObjectOfType<ChildInteractions>();
     }
 
     private void OnEnable()
     {
         _mouseClick.Enable();
         _mouseClick.performed += MousePressed;
+        
     }
     private void OnDisable()
     {
@@ -57,22 +66,35 @@ public class CandyInterations : MonoBehaviour
         _rigidbody.useGravity = true;
         _mouseClick.Disable();
     }
-    private void MousePressed(InputAction.CallbackContext context)
+    public void MousePressed(InputAction.CallbackContext context)
     {
         Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit)) 
         {
             if (hit.collider != null && (hit.collider.gameObject.CompareTag("Candy")))
             {
+
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
             }
+
+        }
+
+
+    }
+    private void Update()
+    {
+        if (_mouseClick.ReadValue<float>() != 0)
+        {
+            _rigidbody.useGravity = true;
+
         }
     }
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Candy"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
@@ -83,33 +105,57 @@ public class CandyInterations : MonoBehaviour
             if (_giveBaglocation != null && _rigidbody.useGravity)
             {
                 _doorInteraction.DestroyCandyBag();
-                // add a check for if the child is a monster or human and if the right candy is
-                if (_isMonsterCandy)
+                // add a check for if the child is a monster or human and if you gave them the right candy
+                if (_interactionscript.CandyType && _childInteractions.ChildType)
                 {
+                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the child monster candy.");
+                    Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
                     Debug.Log(_monsterCandyCount);
 
+
                 }
-                else
+                else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
+                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("The candy bag was not destroyed by the monster candy.");
+                    Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
+                }
+                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
+                {
+                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+
+                    _pointsTimer.OnOptionSelected();
+                    Debug.Log("You gave the Monster child Human candy.");
+                    HumanCandy += 1;
+                    Debug.Log(_humanCandyCount);
+                    _doorInteraction.TraumatizeCamera();
+
+                }
+                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
+                {
+                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+                    _pointsTimer.OnOptionSelected();
+                    Debug.Log("You gave the Human child Monster candy.");
+                    MonsterCandy += 1;
+                    Debug.Log(_monsterCandyCount);
+                    _doorInteraction.TraumatizeCamera();
                 }
             }
             else
             {
-                Debug.Log("GiveBagLocation is already null");
+                //Debug.Log("GiveBagLocation is already null");
             }
         }
     }
     private IEnumerator DragUpdate(GameObject clickedObject)
     {
         float _initialDistance = Vector3.Distance(clickedObject.transform.position, _mainCamera.transform.position);
-        clickedObject.TryGetComponent<Rigidbody>(out var rb);
+        clickedObject.TryGetComponent<Rigidbody>(out Rigidbody rb);
         while (_mouseClick.ReadValue<float>() != 0) 
         {
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -125,9 +171,5 @@ public class CandyInterations : MonoBehaviour
                 yield return null;
             }
         }
-    }
-    private void OnMouseUp()
-    {
-        _rigidbody.useGravity = true;
     }
 }

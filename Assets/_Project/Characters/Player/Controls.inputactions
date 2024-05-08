@@ -9,7 +9,7 @@
                     "name": "Mouse over",
                     "type": "Value",
                     "id": "ab8e2fa2-8484-4e95-a696-ac11f2a77ccd",
-                    "expectedControlType": "Vector3",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -17,37 +17,26 @@
             ],
             "bindings": [
                 {
-                    "name": "Mousedrag",
-                    "id": "56fec865-6583-4f9a-bda9-4670f872c013",
-                    "path": "OneModifier",
+                    "name": "",
+                    "id": "c703bc43-7940-46af-99fa-9b0f1b3f653e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Mouse over",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "binding",
-                    "id": "65bb0c8b-ef7e-4a47-8a09-fbec23e2b45f",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "name": "",
+                    "id": "2735fe60-8f2e-4903-9525-ba637416a7b8",
+                    "path": "<Mouse>/press",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Mouse over",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "binding",
-                    "id": "9bf575d1-d952-4b48-a375-da529da2677d",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mouse over",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

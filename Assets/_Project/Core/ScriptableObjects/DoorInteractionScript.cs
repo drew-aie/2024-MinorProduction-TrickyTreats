@@ -63,7 +63,6 @@ public class DoorInteractionScript : MonoBehaviour
         {
             // Close the door
             _door.transform.DORotate(new Vector3(0, 0, 0), 1, RotateMode.Fast);
-            _mainCamera.GetComponent<CameraShake>().AddTrauma(.8f);
 
             _isBagDestroyed = false;
             _isOpen = false;
@@ -79,5 +78,9 @@ public class DoorInteractionScript : MonoBehaviour
         //Destroy(_currentCandyBag);
         //_currentCandyBag = null;
         _isBagDestroyed = true;
+    }
+    public void TraumatizeCamera()
+    {
+        _mainCamera.GetComponent<CameraShake>().AddTrauma(.8f);
     }
 }

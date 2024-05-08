@@ -77,10 +77,7 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            AddTrauma(0.3f);
-        else if (Input.GetKeyDown(KeyCode.R))
-            AddTrauma(0.6f);
+
 
         // No need to process if there is no trauma
         if (Trauma <= 0)
