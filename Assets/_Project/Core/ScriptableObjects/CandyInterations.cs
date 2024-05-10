@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,6 +9,7 @@ public class CandyInterations : MonoBehaviour
 {
 
     private InputAction _mouseClick;
+    private bool _ismouseClicked;
     private Rigidbody _rigidbody;
     [SerializeField]
     private float _mouseDragPhysicsSpeed = 10;
@@ -41,6 +43,11 @@ public class CandyInterations : MonoBehaviour
     {
         get { return _isMonsterCandy; }
     }
+    public bool IsMouseClicked
+    {
+        get { return _ismouseClicked; }
+        set { _ismouseClicked = value; }
+    }
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Awake()
     {
@@ -57,35 +64,39 @@ public class CandyInterations : MonoBehaviour
     private void OnEnable()
     {
         _mouseClick.Enable();
+        IsMouseClicked = true;
         _mouseClick.performed += MousePressed;
         
     }
     private void OnDisable()
     {
         _mouseClick.performed -= MousePressed;
-        _rigidbody.useGravity = true;
+        _ismouseClicked = false;
+
         _mouseClick.Disable();
     }
     public void MousePressed(InputAction.CallbackContext context)
     {
-        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit)) 
-        {
-            if (hit.collider != null && (hit.collider.gameObject.CompareTag("Candy")))
+            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
+                if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
+                {
 
-                StartCoroutine(DragUpdate(hit.collider.gameObject));
+                    StartCoroutine(DragUpdate(hit.collider.gameObject));
+                }
+
             }
+        
 
-        }
-
-
+        
     }
     private void Update()
     {
-        if (_mouseClick.ReadValue<float>() != 0)
+        if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
 
@@ -94,7 +105,7 @@ public class CandyInterations : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Candy"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
@@ -163,6 +174,7 @@ public class CandyInterations : MonoBehaviour
             {
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
+               
                 yield return _waitForFixedUpdate;
             }
             else

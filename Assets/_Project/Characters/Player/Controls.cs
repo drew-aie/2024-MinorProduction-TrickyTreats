@@ -28,10 +28,19 @@ public partial class @Controls : IInputActionCollection2, IDisposable
             ""id"": ""73f4e933-5aec-496d-9444-6186b965f1cc"",
             ""actions"": [
                 {
-                    ""name"": ""Mouse over"",
+                    ""name"": ""mouseClick"",
                     ""type"": ""Value"",
                     ""id"": ""ab8e2fa2-8484-4e95-a696-ac11f2a77ccd"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""humanMouseClick"",
+                    ""type"": ""Value"",
+                    ""id"": ""0e2678ba-0c33-45d0-bff4-e3c326a90f30"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -40,34 +49,47 @@ public partial class @Controls : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""c703bc43-7940-46af-99fa-9b0f1b3f653e"",
+                    ""id"": ""8439ca4e-b87b-4771-8f45-9d2bb650c8d5"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mouse over"",
+                    ""groups"": ""GameControl"",
+                    ""action"": ""mouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2735fe60-8f2e-4903-9525-ba637416a7b8"",
-                    ""path"": ""<Mouse>/press"",
-                    ""interactions"": ""Press(behavior=1)"",
+                    ""id"": ""5f6462d5-6d02-4f5c-baf2-3e31ccf9b709"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Mouse over"",
+                    ""groups"": ""GameControl"",
+                    ""action"": ""humanMouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""GameControl"",
+            ""bindingGroup"": ""GameControl"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
-        m_Mouse_Mouseover = m_Mouse.FindAction("Mouse over", throwIfNotFound: true);
+        m_Mouse_mouseClick = m_Mouse.FindAction("mouseClick", throwIfNotFound: true);
+        m_Mouse_humanMouseClick = m_Mouse.FindAction("humanMouseClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -127,12 +149,14 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     // Mouse
     private readonly InputActionMap m_Mouse;
     private IMouseActions m_MouseActionsCallbackInterface;
-    private readonly InputAction m_Mouse_Mouseover;
+    private readonly InputAction m_Mouse_mouseClick;
+    private readonly InputAction m_Mouse_humanMouseClick;
     public struct MouseActions
     {
         private @Controls m_Wrapper;
         public MouseActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Mouseover => m_Wrapper.m_Mouse_Mouseover;
+        public InputAction @mouseClick => m_Wrapper.m_Mouse_mouseClick;
+        public InputAction @humanMouseClick => m_Wrapper.m_Mouse_humanMouseClick;
         public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -142,22 +166,38 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_MouseActionsCallbackInterface != null)
             {
-                @Mouseover.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseover;
-                @Mouseover.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseover;
-                @Mouseover.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseover;
+                @mouseClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
+                @mouseClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
+                @mouseClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
+                @humanMouseClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
+                @humanMouseClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
+                @humanMouseClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
             }
             m_Wrapper.m_MouseActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Mouseover.started += instance.OnMouseover;
-                @Mouseover.performed += instance.OnMouseover;
-                @Mouseover.canceled += instance.OnMouseover;
+                @mouseClick.started += instance.OnMouseClick;
+                @mouseClick.performed += instance.OnMouseClick;
+                @mouseClick.canceled += instance.OnMouseClick;
+                @humanMouseClick.started += instance.OnHumanMouseClick;
+                @humanMouseClick.performed += instance.OnHumanMouseClick;
+                @humanMouseClick.canceled += instance.OnHumanMouseClick;
             }
         }
     }
     public MouseActions @Mouse => new MouseActions(this);
+    private int m_GameControlSchemeIndex = -1;
+    public InputControlScheme GameControlScheme
+    {
+        get
+        {
+            if (m_GameControlSchemeIndex == -1) m_GameControlSchemeIndex = asset.FindControlSchemeIndex("GameControl");
+            return asset.controlSchemes[m_GameControlSchemeIndex];
+        }
+    }
     public interface IMouseActions
     {
-        void OnMouseover(InputAction.CallbackContext context);
+        void OnMouseClick(InputAction.CallbackContext context);
+        void OnHumanMouseClick(InputAction.CallbackContext context);
     }
 }
