@@ -14,7 +14,7 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private float _mouseDragPhysicsSpeed = 10;
     [SerializeField]
-    private float _mouseDragSpeed = .1f;
+    private float _mouseDragSpeed = .0f;
     [SerializeField]
     private GameObject _giveBaglocation;
     [SerializeField]
@@ -53,7 +53,6 @@ public class CandyInterations : MonoBehaviour
     {
         _interactionscript = FindObjectOfType<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
-        _velocity = Vector3.zero;
         _mainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
@@ -166,15 +165,16 @@ public class CandyInterations : MonoBehaviour
     private IEnumerator DragUpdate(GameObject clickedObject)
     {
         float _initialDistance = Vector3.Distance(clickedObject.transform.position, _mainCamera.transform.position);
-        clickedObject.TryGetComponent<Rigidbody>(out Rigidbody rb);
+        clickedObject.TryGetComponent<Rigidbody>(out _rigidbody);
         while (_mouseClick.ReadValue<float>() != 0) 
         {
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (rb != null)
+            if (_rigidbody != null)
             {
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
-                rb.velocity = _direction * _mouseDragPhysicsSpeed;
-               
+
+                _rigidbody.velocity = _direction * _mouseDragPhysicsSpeed;
+                
                 yield return _waitForFixedUpdate;
             }
             else
