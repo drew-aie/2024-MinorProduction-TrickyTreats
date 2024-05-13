@@ -17,6 +17,7 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
     private Camera _mainCamera;
+
     private void Awake()
     {
         _mainCamera = Camera.main;
@@ -24,7 +25,12 @@ public class DoorInteractionScript : MonoBehaviour
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _currentCandyBag.SetActive(false);
     }
+    public bool Open
+    {
+        get { return _isOpen; }
+        set { _isOpen = value; }
 
+    }
     private void OnEnable()
     {
         _mouseClick.Enable();
