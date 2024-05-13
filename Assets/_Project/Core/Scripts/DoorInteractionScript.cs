@@ -24,7 +24,12 @@ public class DoorInteractionScript : MonoBehaviour
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _currentCandyBag.SetActive(false);
     }
+    public bool Open
+    {
+        get { return _isOpen; }
+        set { _isOpen = value; }
 
+    }
     private void OnEnable()
     {
         _mouseClick.Enable();

@@ -11,17 +11,20 @@ public class PointsTimer : MonoBehaviour
     private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
-    private float _decreaseRate = 1f;
+    [SerializeField]
+    private float _decreaseRate = 50f;
     [SerializeField]
     private CandyInterations _human;
     [SerializeField]
     private CandyInterations _monster;
     [SerializeField]
-    private float _maxkids = 3;
+    private float _maxkids = 10;
     private bool _maxReached = false;
     private float _totalgivencandy;
     [SerializeField]
     private ChildInteractions _childInteractions;
+    [SerializeField]
+    private DoorInteractionScript _doorInteraction;
 
     public bool MaxReached()
     {
@@ -37,20 +40,25 @@ public class PointsTimer : MonoBehaviour
 
         _localpoints = _maxPoints;
         StartCoroutine(DecreasePointsOverTime());
+
+
     }
 
     IEnumerator DecreasePointsOverTime()
     {
-        _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
-        //Debug.Log(_monster.MonsterCandy);
-        //Debug.Log(_human.HumanCandy);
+
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
-            // Wait for 1 second
-            yield return new WaitForSeconds(1f);
-            // Decrease points
-            _localpoints -= _decreaseRate;
+            if (_doorInteraction.Open)
+            {
+                // Wait for 1 second
+                yield return new WaitForSeconds(1f);
+                // Decrease points
+                _localpoints -= _decreaseRate;
+                Debug.Log(_localpoints);
 
+            }
+            
         }
     }
 
@@ -64,6 +72,9 @@ public class PointsTimer : MonoBehaviour
         // Call this function when an option is selected
         StopDecreasingPoints();
 
+        _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
+        Debug.Log("Monster: " + _monster.MonsterCandy);
+        Debug.Log("Human: " + _human.HumanCandy);
         _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
         Debug.Log("Points: " + _globalpoints);
         _localpoints = _maxPoints;

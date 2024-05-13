@@ -125,7 +125,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
-                    //Debug.Log(_monsterCandyCount);
+                    Debug.Log(_monsterCandyCount);
 
 
                 }
@@ -135,7 +135,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
-                    //Debug.Log(_humanCandyCount);
+                    Debug.Log(_humanCandyCount);
                 }
                 else if (!_interactionscript.CandyType && _childInteractions.ChildType)
                 {
@@ -144,7 +144,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
-                    //Debug.Log(_humanCandyCount);
+                    Debug.Log(_humanCandyCount);
                     _doorInteraction.TraumatizeCamera();
 
                 }
@@ -155,7 +155,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
-                    //Debug.Log(_monsterCandyCount);
+                    Debug.Log(_monsterCandyCount);
                     _doorInteraction.TraumatizeCamera();
                 }
             }
