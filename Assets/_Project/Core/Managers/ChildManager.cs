@@ -56,7 +56,7 @@ public class ChildManager : MonoBehaviour
         while (_canSpawn)
         {
             //Create a new enemy in the scene
-            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, Quaternion.identity);
+            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, transform.rotation);
             //Pause for the given time in seconds before resuming the function
             yield return new WaitForSeconds(_timeBetweenSpawns);
             //Subtract from child count
