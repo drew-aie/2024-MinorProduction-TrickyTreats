@@ -74,9 +74,6 @@ public class DoorInteractionScript : MonoBehaviour
     {
         // Destroy the current candy bag
         _currentCandyBag.SetActive(false);
-
-        //Destroy(_currentCandyBag);
-        //_currentCandyBag = null;
         _isBagDestroyed = true;
     }
     public void TraumatizeCamera()

@@ -6,8 +6,7 @@ public class ChildInteractions : MonoBehaviour
 {
     [SerializeField]
     private bool _isChildMonster;
-    [SerializeField]
-    private float _childCandyNeeds;
+
 
     public bool ChildType
     {

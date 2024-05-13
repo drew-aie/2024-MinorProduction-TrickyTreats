@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class CandyInterations : MonoBehaviour
 {
 
@@ -14,7 +15,7 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private float _mouseDragPhysicsSpeed = 10;
     [SerializeField]
-    private float _mouseDragSpeed = .0f;
+    private float _mouseDragSpeed = .01f;
     [SerializeField]
     private GameObject _giveBaglocation;
     [SerializeField]
@@ -29,6 +30,8 @@ public class CandyInterations : MonoBehaviour
     private float _humanCandyCount = 0;
     private ChildInteractions _childInteractions;
     private Interactionscript _interactionscript;
+    
+    
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -51,7 +54,8 @@ public class CandyInterations : MonoBehaviour
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Awake()
     {
-        _interactionscript = FindObjectOfType<Interactionscript>();
+        
+        _interactionscript = GetComponent<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _mainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
@@ -74,8 +78,10 @@ public class CandyInterations : MonoBehaviour
 
         _mouseClick.Disable();
     }
+
     public void MousePressed(InputAction.CallbackContext context)
     {
+
 
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
@@ -100,6 +106,7 @@ public class CandyInterations : MonoBehaviour
             _rigidbody.useGravity = true;
 
         }
+        
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -135,7 +142,7 @@ public class CandyInterations : MonoBehaviour
                     HumanCandy += 1;
                     //Debug.Log(_humanCandyCount);
                 }
-                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
                 {
                     _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
 
@@ -146,7 +153,7 @@ public class CandyInterations : MonoBehaviour
                     _doorInteraction.TraumatizeCamera();
 
                 }
-                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
+                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
                     _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
                     _pointsTimer.OnOptionSelected();
@@ -162,19 +169,29 @@ public class CandyInterations : MonoBehaviour
             }
         }
     }
+    
+
     private IEnumerator DragUpdate(GameObject clickedObject)
     {
+        
         float _initialDistance = Vector3.Distance(clickedObject.transform.position, _mainCamera.transform.position);
-        clickedObject.TryGetComponent<Rigidbody>(out _rigidbody);
+        clickedObject.TryGetComponent<Rigidbody>(out Rigidbody rb);
+        
         while (_mouseClick.ReadValue<float>() != 0) 
         {
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (_rigidbody != null)
+            if (rb != null)
             {
+
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
 
-                _rigidbody.velocity = _direction * _mouseDragPhysicsSpeed;
-                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+                rb.velocity = _direction * _mouseDragPhysicsSpeed;
+                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+
+                Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, _startingPosition.z);
+
+                _clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
+                clickedObject.transform.position = _clickedObjectz;
 
                 yield return _waitForFixedUpdate;
             }

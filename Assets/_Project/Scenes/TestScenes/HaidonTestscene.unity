@@ -141,8 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e6e78ed54855d489745f36ca2631de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isChildMonster: 1
-  _childCandyNeeds: 0
+  _isChildMonster: 0
 --- !u!1 &538904232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,8 +1342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e7852cb984d454c99b811d57cc763c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseDragPhysicsSpeed: 10
-  _mouseDragSpeed: 0
+  _mouseDragPhysicsSpeed: 1.9
+  _mouseDragSpeed: 0.01
   _giveBaglocation: {fileID: 1098666120}
   _doorInteraction: {fileID: 883794434}
   _isMonsterCandy: 1
@@ -1368,7 +1367,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964504418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
