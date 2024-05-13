@@ -39,25 +39,26 @@ public class PointsTimer : MonoBehaviour
     {
 
         _localpoints = _maxPoints;
+        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         StartCoroutine(DecreasePointsOverTime());
 
+    }
+    private void Update()
+    {
 
     }
-
     IEnumerator DecreasePointsOverTime()
     {
 
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
-            if (_doorInteraction.Open)
-            {
+
                 // Wait for 1 second
                 yield return new WaitForSeconds(1f);
                 // Decrease points
                 _localpoints -= _decreaseRate;
                 Debug.Log(_localpoints);
 
-            }
             
         }
     }
@@ -65,6 +66,8 @@ public class PointsTimer : MonoBehaviour
     private void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
+         _localpoints = _maxPoints;
+        Debug.Log(_totalgivencandy);
     }
 
     public void OnOptionSelected()
@@ -77,8 +80,7 @@ public class PointsTimer : MonoBehaviour
         Debug.Log("Human: " + _human.HumanCandy);
         _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
         Debug.Log("Points: " + _globalpoints);
-        _localpoints = _maxPoints;
-        Debug.Log(_totalgivencandy);
+       
     }
     public void AddPoints()
     {

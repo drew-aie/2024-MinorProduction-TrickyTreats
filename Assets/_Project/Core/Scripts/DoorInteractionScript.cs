@@ -17,6 +17,7 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
     private Camera _mainCamera;
+
     private void Awake()
     {
         _mainCamera = Camera.main;
