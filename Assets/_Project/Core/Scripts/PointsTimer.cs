@@ -11,17 +11,20 @@ public class PointsTimer : MonoBehaviour
     private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
-    private float _decreaseRate = 1f;
+    [SerializeField]
+    private float _decreaseRate = 50f;
     [SerializeField]
     private CandyInterations _human;
     [SerializeField]
     private CandyInterations _monster;
     [SerializeField]
-    private float _maxkids = 3;
+    private float _maxkids = 10;
     private bool _maxReached = false;
     private float _totalgivencandy;
     [SerializeField]
     private ChildInteractions _childInteractions;
+    [SerializeField]
+    private DoorInteractionScript _doorInteraction;
 
     public bool MaxReached()
     {
@@ -36,51 +39,58 @@ public class PointsTimer : MonoBehaviour
     {
 
         _localpoints = _maxPoints;
+        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         StartCoroutine(DecreasePointsOverTime());
-    }
 
+    }
+    private void Update()
+    {
+
+    }
     IEnumerator DecreasePointsOverTime()
     {
-        _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
-        //Debug.Log(_monster.MonsterCandy);
-        //Debug.Log(_human.HumanCandy);
+
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
-            // Wait for 1 second
-            yield return new WaitForSeconds(1f);
-            // Decrease points
-            _localpoints -= _decreaseRate;
 
+                // Wait for 1 second
+                yield return new WaitForSeconds(1f);
+                // Decrease points
+                _localpoints -= _decreaseRate;
+                Debug.Log(_localpoints);
+
+            
         }
     }
 
     private void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
+         _localpoints = _maxPoints;
+        Debug.Log(_totalgivencandy);
     }
 
     public void OnOptionSelected()
     {
         // Call this function when an option is selected
         StopDecreasingPoints();
-        
 
+        _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
+        Debug.Log("Monster: " + _monster.MonsterCandy);
+        Debug.Log("Human: " + _human.HumanCandy);
+        _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
         Debug.Log("Points: " + _globalpoints);
-        _localpoints = _maxPoints;
-        Debug.Log(_totalgivencandy);
+       
     }
-    public void Totalpointsmath(ChildInteractions interaction, bool candy)
+    public void AddPoints()
     {
-        if (interaction.ChildType && candy)
-        {
-            Debug.Log(_human.IsMonster);
-            Debug.Log(_monster.IsMonster);
-            _globalpoints += _localpoints;
-        }
-        else if (interaction.ChildType && !candy)
-        {
-            _globalpoints -= _localpoints;
 
-        }
+
+            _globalpoints += _localpoints;
+        
+    }
+    public void RemovePoints()
+    {
+        _globalpoints -= _localpoints;
     }
 }
