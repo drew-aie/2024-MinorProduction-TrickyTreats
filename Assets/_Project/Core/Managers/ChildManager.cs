@@ -20,13 +20,13 @@ public class ChildManager : MonoBehaviour
     [SerializeField]
     private bool _canSpawn = true;
 
-    private int _ChildCount = 10;
-    private SphereCollider _sphereCollider;
+    private int _childCount = 10;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        if (_ChildCount !< 10 && _isChildSpawned && _canSpawn)
+        if (_childCount <= 10 && _canSpawn && !_isChildSpawned)
             StartCoroutine(SpawnObjects());
     }
 
@@ -35,18 +35,16 @@ public class ChildManager : MonoBehaviour
         _canSpawn = true;
     }
 
-    bool CheckSpawnTrigger()
+    private void OnTriggerEnter(Collider other)
     {
-        if (_sphereCollider.isTrigger == true)
-        {
-            _isChildSpawned = true;
-            _canSpawn = false;
-            return true;
-        }
+        _canSpawn = false;
+        _isChildSpawned = true;
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
         _canSpawn = true;
         _isChildSpawned = false;
-        return false;
     }
 
     /// <summary>
@@ -58,11 +56,11 @@ public class ChildManager : MonoBehaviour
         while (_canSpawn)
         {
             //Create a new enemy in the scene
-            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, new Quaternion());
+            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, Quaternion.identity);
             //Pause for the given time in seconds before resuming the function
             yield return new WaitForSeconds(_timeBetweenSpawns);
             //Subtract from child count
-            _ChildCount--;
+            _childCount--;
         }
     }
 }
