@@ -31,10 +31,7 @@ public class PointsTimer : MonoBehaviour
         }
         return _maxReached;
     }
-    private void Awake()
-    {
 
-    }
     private void Start()
     {
 
@@ -45,8 +42,8 @@ public class PointsTimer : MonoBehaviour
     IEnumerator DecreasePointsOverTime()
     {
         _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
-        Debug.Log(_monster.MonsterCandy);
-        Debug.Log(_human.HumanCandy);
+        //Debug.Log(_monster.MonsterCandy);
+        //Debug.Log(_human.HumanCandy);
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
             // Wait for 1 second

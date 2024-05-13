@@ -122,7 +122,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
+                    //Debug.Log(_monsterCandyCount);
 
 
                 }
@@ -133,7 +133,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
+                    //Debug.Log(_humanCandyCount);
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
@@ -142,7 +142,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
+                    //Debug.Log(_humanCandyCount);
                     _doorInteraction.TraumatizeCamera();
 
                 }
@@ -152,7 +152,7 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
+                    //Debug.Log(_monsterCandyCount);
                     _doorInteraction.TraumatizeCamera();
                 }
             }
@@ -174,7 +174,8 @@ public class CandyInterations : MonoBehaviour
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
 
                 _rigidbody.velocity = _direction * _mouseDragPhysicsSpeed;
-                
+                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+
                 yield return _waitForFixedUpdate;
             }
             else
