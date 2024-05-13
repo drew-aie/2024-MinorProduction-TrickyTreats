@@ -20,14 +20,14 @@ public class CandyInterations : MonoBehaviour
     private GameObject _giveBaglocation;
     [SerializeField]
     private DoorInteractionScript _doorInteraction;
-    [SerializeField]
-    private bool _isMonsterCandy;
+
     private Vector3 _startingPosition;
     private Camera _mainCamera;
     private Vector3 _velocity;
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
+    [SerializeField]
     private ChildInteractions _childInteractions;
     private Interactionscript _interactionscript;
     
@@ -42,10 +42,7 @@ public class CandyInterations : MonoBehaviour
         get { return _humanCandyCount; }
         set { _humanCandyCount = value; }
     }
-    public bool IsMonster
-    {
-        get { return _isMonsterCandy; }
-    }
+
     public bool IsMouseClicked
     {
         get { return _ismouseClicked; }
@@ -61,7 +58,6 @@ public class CandyInterations : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
         _pointsTimer = FindObjectOfType<PointsTimer>();
-        _childInteractions = FindObjectOfType<ChildInteractions>();
     }
 
     private void OnEnable()
@@ -125,7 +121,7 @@ public class CandyInterations : MonoBehaviour
                 // add a check for if the child is a monster or human and if you gave them the right candy
                 if (_interactionscript.CandyType && _childInteractions.ChildType)
                 {
-                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+                    _pointsTimer.AddPoints();
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
@@ -135,8 +131,7 @@ public class CandyInterations : MonoBehaviour
                 }
                 else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
-                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
-
+                    _pointsTimer.AddPoints();
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
@@ -144,7 +139,7 @@ public class CandyInterations : MonoBehaviour
                 }
                 else if (!_interactionscript.CandyType && _childInteractions.ChildType)
                 {
-                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+                    _pointsTimer.RemovePoints();
 
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Human candy.");
@@ -155,7 +150,8 @@ public class CandyInterations : MonoBehaviour
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
-                    _pointsTimer.Totalpointsmath(_childInteractions, IsMonster);
+                    _pointsTimer.RemovePoints();
+
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;

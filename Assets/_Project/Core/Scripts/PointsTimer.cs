@@ -63,24 +63,21 @@ public class PointsTimer : MonoBehaviour
     {
         // Call this function when an option is selected
         StopDecreasingPoints();
-        
 
+        _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
         Debug.Log("Points: " + _globalpoints);
         _localpoints = _maxPoints;
         Debug.Log(_totalgivencandy);
     }
-    public void Totalpointsmath(ChildInteractions interaction, bool candy)
+    public void AddPoints()
     {
-        if (interaction.ChildType && candy)
-        {
-            Debug.Log(_human.IsMonster);
-            Debug.Log(_monster.IsMonster);
-            _globalpoints += _localpoints;
-        }
-        else if (interaction.ChildType && !candy)
-        {
-            _globalpoints -= _localpoints;
 
-        }
+
+            _globalpoints += _localpoints;
+        
+    }
+    public void RemovePoints()
+    {
+        _globalpoints -= _localpoints;
     }
 }

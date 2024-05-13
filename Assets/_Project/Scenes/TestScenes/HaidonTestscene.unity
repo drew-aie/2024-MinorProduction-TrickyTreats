@@ -482,7 +482,7 @@ MonoBehaviour:
   _mouseDragSpeed: 3.47
   _giveBaglocation: {fileID: 1098666120}
   _doorInteraction: {fileID: 883794434}
-  _isMonsterCandy: 0
+  _childInteractions: {fileID: 278350003}
 --- !u!114 &1051533011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   _mouseDragSpeed: 0.01
   _giveBaglocation: {fileID: 1098666120}
   _doorInteraction: {fileID: 883794434}
-  _isMonsterCandy: 1
+  _childInteractions: {fileID: 278350003}
 --- !u!114 &1964504428
 MonoBehaviour:
   m_ObjectHideFlags: 0
