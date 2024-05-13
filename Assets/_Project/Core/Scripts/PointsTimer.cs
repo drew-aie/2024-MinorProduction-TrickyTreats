@@ -21,8 +21,7 @@ public class PointsTimer : MonoBehaviour
     private float _maxkids = 10;
     private bool _maxReached = false;
     private float _totalgivencandy;
-    [SerializeField]
-    private ChildInteractions _childInteractions;
+
     [SerializeField]
     private DoorInteractionScript _doorInteraction;
 

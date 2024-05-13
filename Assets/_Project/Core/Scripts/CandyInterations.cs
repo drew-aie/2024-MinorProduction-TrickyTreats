@@ -27,11 +27,10 @@ public class CandyInterations : MonoBehaviour
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
-    [SerializeField]
-    private ChildInteractions _childInteractions;
+
     private Interactionscript _interactionscript;
-    
-    
+
+    private ChildController _childController;
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -58,6 +57,7 @@ public class CandyInterations : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
         _pointsTimer = FindObjectOfType<PointsTimer>();
+        _childController = FindObjectOfType<ChildController>();
     }
 
     private void OnEnable()
@@ -119,7 +119,7 @@ public class CandyInterations : MonoBehaviour
             {
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
-                if (_interactionscript.CandyType && _childInteractions.ChildType)
+                if (_interactionscript.CandyType && _childController.IsMonster)
                 {
                     _pointsTimer.AddPoints();
                     _pointsTimer.OnOptionSelected();
@@ -129,7 +129,7 @@ public class CandyInterations : MonoBehaviour
 
 
                 }
-                else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && !_childController.IsMonster)
                 {
                     _pointsTimer.AddPoints();
                     _pointsTimer.OnOptionSelected();
@@ -137,7 +137,7 @@ public class CandyInterations : MonoBehaviour
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
                 }
-                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && _childController.IsMonster)
                 {
                     _pointsTimer.RemovePoints();
 
@@ -148,7 +148,7 @@ public class CandyInterations : MonoBehaviour
                     _doorInteraction.TraumatizeCamera();
 
                 }
-                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (_interactionscript.CandyType && !_childController.IsMonster)
                 {
                     _pointsTimer.RemovePoints();
 

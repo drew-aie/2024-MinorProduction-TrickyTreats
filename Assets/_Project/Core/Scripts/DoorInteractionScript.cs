@@ -68,7 +68,7 @@ public class DoorInteractionScript : MonoBehaviour
         else if (_isBagDestroyed && _isOpen)
         {
             // Close the door
-            _door.transform.DORotate(new Vector3(0, 0, 0), 1, RotateMode.Fast);
+            _door.transform.DORotate(new Vector3(0, 90, 0), 1, RotateMode.Fast);
 
             _isBagDestroyed = false;
             _isOpen = false;
