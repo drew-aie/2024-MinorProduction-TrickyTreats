@@ -330,12 +330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbc5d987f014ce4a9886e72be505146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _decreaseRate: 50
   _human: {fileID: 1051533010}
   _monster: {fileID: 1964504427}
   _maxkids: 10
   _childInteractions: {fileID: 278350003}
-  _doorInteraction: {fileID: 883794434}
 --- !u!4 &926193697
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +482,7 @@ MonoBehaviour:
   _mouseDragSpeed: 3.47
   _giveBaglocation: {fileID: 1098666120}
   _doorInteraction: {fileID: 883794434}
-  _childInteractions: {fileID: 278350003}
+  _isMonsterCandy: 0
 --- !u!114 &1051533011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1346,7 @@ MonoBehaviour:
   _mouseDragSpeed: 0.01
   _giveBaglocation: {fileID: 1098666120}
   _doorInteraction: {fileID: 883794434}
-  _childInteractions: {fileID: 278350003}
+  _isMonsterCandy: 1
 --- !u!114 &1964504428
 MonoBehaviour:
   m_ObjectHideFlags: 0
