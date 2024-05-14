@@ -27,8 +27,8 @@ public class CandyInterations : MonoBehaviour
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
-    [SerializeField]
-    private ChildInteractions _childInteractions;
+
+    private ChildController _childInteractions;
     private Interactionscript _interactionscript;
     
     
@@ -58,6 +58,7 @@ public class CandyInterations : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
         _pointsTimer = FindObjectOfType<PointsTimer>();
+        _childInteractions = FindObjectOfType<ChildController>();
     }
 
     private void OnEnable()
@@ -117,6 +118,7 @@ public class CandyInterations : MonoBehaviour
         {
             if (_giveBaglocation != null && _rigidbody.useGravity)
             {
+                
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
                 if (_interactionscript.CandyType && _childInteractions.ChildType)

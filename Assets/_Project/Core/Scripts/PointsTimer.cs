@@ -21,14 +21,13 @@ public class PointsTimer : MonoBehaviour
     private float _maxkids = 10;
     private bool _maxReached = false;
     private float _totalgivencandy;
-    [SerializeField]
-    private ChildInteractions _childInteractions;
+    private ChildController _childInteractions;
     [SerializeField]
     private DoorInteractionScript _doorInteraction;
 
     public bool MaxReached()
     {
-        if (_totalgivencandy == _maxkids)
+        if (_totalgivencandy >= _maxkids)
         {
             _maxReached = true;
         }
@@ -37,7 +36,7 @@ public class PointsTimer : MonoBehaviour
 
     private void Start()
     {
-
+        _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         StartCoroutine(DecreasePointsOverTime());
