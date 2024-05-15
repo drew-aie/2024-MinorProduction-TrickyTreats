@@ -27,7 +27,7 @@ public class CandyInterations : MonoBehaviour
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
-
+    [SerializeField]
     private ChildController _childInteractions;
     private Interactionscript _interactionscript;
     
@@ -58,9 +58,9 @@ public class CandyInterations : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _startingPosition = gameObject.transform.position;
         _pointsTimer = FindObjectOfType<PointsTimer>();
-        _childInteractions = FindObjectOfType<ChildController>();
+        
     }
-
+    
     private void OnEnable()
     {
         _mouseClick.Enable();
@@ -103,7 +103,10 @@ public class CandyInterations : MonoBehaviour
             _rigidbody.useGravity = true;
 
         }
-        
+        if (_childInteractions == null)
+        {
+            _childInteractions = FindObjectOfType<ChildController>();
+        }
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -147,7 +150,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
-                    _doorInteraction.TraumatizeCamera();
+                    //_doorInteraction.TraumatizeCamera();
 
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
@@ -158,7 +161,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
                     Debug.Log(_monsterCandyCount);
-                    _doorInteraction.TraumatizeCamera();
+                    //_doorInteraction.TraumatizeCamera();
                 }
             }
             else

@@ -352,6 +352,8 @@ MonoBehaviour:
   _mouseDragSpeed: 0.01
   _giveBaglocation: {fileID: 1503518875}
   _doorInteraction: {fileID: 1997291357}
+  _childInteractions: {fileID: -5876324562770113874, guid: 239bb6e8fd2a75849bf21d78153c79d3,
+    type: 3}
 --- !u!114 &40070785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,6 +1052,7 @@ MonoBehaviour:
   _mouseDragSpeed: 0.01
   _giveBaglocation: {fileID: 1503518875}
   _doorInteraction: {fileID: 1997291357}
+  _childInteractions: {fileID: 0}
 --- !u!1 &1972923871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1237,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnObject
       value: 
-      objectReference: {fileID: 919132149155446097, guid: 8089d598582ba5949b47cc91aea5c3c2,
+      objectReference: {fileID: 2509340121180152294, guid: 239bb6e8fd2a75849bf21d78153c79d3,
         type: 3}
     - target: {fileID: 4622734369275690768, guid: 88526076fb8ac164aa672b5522e9c500,
         type: 3}
