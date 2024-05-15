@@ -56,7 +56,7 @@ public class PointsTimer : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 // Decrease points
                 _localpoints -= _decreaseRate;
-                Debug.Log(_localpoints);
+                //Debug.Log(_localpoints);
 
             
         }
@@ -66,7 +66,7 @@ public class PointsTimer : MonoBehaviour
     {
         StopCoroutine(DecreasePointsOverTime());
          _localpoints = _maxPoints;
-        Debug.Log(_totalgivencandy);
+        //Debug.Log(_totalgivencandy);
     }
 
     public void OnOptionSelected()
@@ -75,10 +75,10 @@ public class PointsTimer : MonoBehaviour
         StopDecreasingPoints();
 
         _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
-        Debug.Log("Monster: " + _monster.MonsterCandy);
-        Debug.Log("Human: " + _human.HumanCandy);
+        //Debug.Log("Monster: " + _monster.MonsterCandy);
+        //Debug.Log("Human: " + _human.HumanCandy);
         _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
-        Debug.Log("Points: " + _globalpoints);
+        //Debug.Log("Points: " + _globalpoints);
        
     }
     public void AddPoints()

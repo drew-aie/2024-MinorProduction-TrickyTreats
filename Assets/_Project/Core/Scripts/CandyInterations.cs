@@ -22,6 +22,7 @@ public class CandyInterations : MonoBehaviour
     private DoorInteractionScript _doorInteraction;
 
     private Vector3 _startingPosition;
+    [SerializeField]
     private Camera _mainCamera;
     private Vector3 _velocity;
     private PointsTimer _pointsTimer;
@@ -49,14 +50,18 @@ public class CandyInterations : MonoBehaviour
         set { _ismouseClicked = value; }
     }
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
+    private void Start()
+    {
+                _startingPosition = gameObject.transform.position;
+    }
     private void Awake()
     {
         
         _interactionscript = GetComponent<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
-        _mainCamera = Camera.main;
+
         _rigidbody = GetComponent<Rigidbody>();
-        _startingPosition = gameObject.transform.position;
+
         _pointsTimer = FindObjectOfType<PointsTimer>();
         
     }
@@ -98,17 +103,18 @@ public class CandyInterations : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log("Mouse Position: " + _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
+
 
         }
         if (_childInteractions == null)
         {
             _childInteractions = FindObjectOfType<ChildController>();
         }
-        Vector3 _newposition = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, _startingPosition.z);
-        gameObject.transform.position = _mainCamera.ScreenToWorldPoint(_newposition);
+        
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -152,7 +158,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _doorInteraction.TraumatizeCamera();
 
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
@@ -163,7 +169,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
                     Debug.Log(_monsterCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _doorInteraction.TraumatizeCamera();
                 }
             }
             else
@@ -187,14 +193,15 @@ public class CandyInterations : MonoBehaviour
             {
 
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
-
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
-                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
-
-                Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, _startingPosition.z);
+                Vector3 _clickedObjectz = new Vector3(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).x, _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).y, _startingPosition.z);
 
                 _clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
                 clickedObject.transform.position = _clickedObjectz;
+
+                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+
+                
 
                 yield return _waitForFixedUpdate;
             }

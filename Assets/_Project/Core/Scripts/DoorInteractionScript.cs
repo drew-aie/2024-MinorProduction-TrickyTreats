@@ -16,11 +16,11 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _candyBagPrefab;
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
+    [SerializeField]
     private Camera _mainCamera;
 
     private void Awake()
     {
-        _mainCamera = Camera.main;
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _currentCandyBag.SetActive(false);
