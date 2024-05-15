@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a5fff1b5a8ebe5428f15d378063b275
+guid: e3355da1fbbcddd45ae455bf24b8b255
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BaseBodyEyes_Mat
-    second: {fileID: 2100000, guid: c0d9dfc84578a5b43a3ebb4c3cbb6379, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaseBodyMouth_Mat
-    second: {fileID: 2100000, guid: 86892df496cba94488e030da89fad953, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BaseBody_Mat
+      name: Body1
     second: {fileID: 2100000, guid: af4fba62771cd8d4580302a272c53d66, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: GhostMstrExtra_Mat
-    second: {fileID: 2100000, guid: e03eb650ce00cbd4898e2b78e1ee6c65, type: 2}
+      name: Face
+    second: {fileID: 2100000, guid: c0d9dfc84578a5b43a3ebb4c3cbb6379, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
