@@ -103,7 +103,7 @@ public class CandyInterations : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("Mouse Position: " + _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        Debug.Log("Mouse Position: " + gameObject.transform.position);
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
@@ -191,16 +191,15 @@ public class CandyInterations : MonoBehaviour
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (rb != null)
             {
-
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
-                Vector3 _clickedObjectz = new Vector3(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).x, _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).y, _startingPosition.z);
+
+                Vector3 _clickedObjectz = new Vector3(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).x, _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).y);
 
                 _clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
                 clickedObject.transform.position = _clickedObjectz;
 
                 clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
-
                 
 
                 yield return _waitForFixedUpdate;
