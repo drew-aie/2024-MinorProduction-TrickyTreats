@@ -11,17 +11,10 @@ public class ChildController : MonoBehaviour
     private bool _hasMonsterCandy = false;
     private bool _hasHumanCandy = false;
 
-    public bool IsMonsterCandy
-    {
-        get { return _hasMonsterCandy; }
-    }
-    public bool IsHumanCandy
-    {
-        get { return _hasHumanCandy; }
-    }
-    public bool IsMonster
+    public bool ChildType
     {
         get { return _isMonster; }
+        set { _isMonster = value; }
     }
     /// <returns>True if child given correct candy, false if not</returns>
     public bool GetChoice()

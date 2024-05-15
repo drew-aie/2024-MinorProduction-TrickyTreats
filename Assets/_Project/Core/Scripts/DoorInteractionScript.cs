@@ -55,6 +55,7 @@ public class DoorInteractionScript : MonoBehaviour
                 if (!_isOpen && !_currentCandyBag.activeSelf && _mouseClick.triggered)
                 {
                     // Open the door
+                    
                     _door.transform.DORotate(new Vector3(0, -90, 0), 1);
                     // Spawn a new candy bag
                     _currentCandyBag.SetActive(true);
@@ -68,7 +69,7 @@ public class DoorInteractionScript : MonoBehaviour
         else if (_isBagDestroyed && _isOpen)
         {
             // Close the door
-            _door.transform.DORotate(new Vector3(0, 90, 0), 1, RotateMode.Fast);
+            _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
 
             _isBagDestroyed = false;
             _isOpen = false;
