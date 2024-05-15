@@ -107,11 +107,13 @@ public class CandyInterations : MonoBehaviour
         {
             _childInteractions = FindObjectOfType<ChildController>();
         }
+        Vector3 _newposition = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, _startingPosition.z);
+        gameObject.transform.position = _mainCamera.ScreenToWorldPoint(_newposition);
     }
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Bowl"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
