@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostMonMat
-  m_Shader: {fileID: -6465566751694194690, guid: f6579995ad2fa4e4c8d1851031fceef8,
+  m_Name: GhostMonEye_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: cbd3699f66417c04e88ff2f66b960a6f,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -43,6 +43,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissonTexture:
+        m_Texture: {fileID: 2800000, guid: ff6683f8911a9bb4b820df59437ec77c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlipbookTexture:
+        m_Texture: {fileID: 2800000, guid: 14b6e9f9641afcd4eb58776ea9a4a007, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -90,12 +98,14 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _FlipbookHeight: 2
+    - _FlipbookTile: 4.27
+    - _FlipbookWidth: 4
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineWIdth: 0.002
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -111,11 +121,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineEmision: {r: 0.3647059, g: 0.7058824, b: 0.6784314, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &8989494280095971180
+--- !u!114 &3276146635382394808
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
