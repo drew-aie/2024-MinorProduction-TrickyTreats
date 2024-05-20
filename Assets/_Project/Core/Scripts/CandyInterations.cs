@@ -4,7 +4,7 @@ using System.Globalization;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.EventSystems;
 
 public class CandyInterations : MonoBehaviour
 {
@@ -68,39 +68,37 @@ public class CandyInterations : MonoBehaviour
     
     private void OnEnable()
     {
+
         _mouseClick.Enable();
         IsMouseClicked = true;
-        _mouseClick.performed += MousePressed;
-        
+        _mouseClick.performed += EventManagerOnMouseHeld;
+
     }
     private void OnDisable()
     {
-        _mouseClick.performed -= MousePressed;
+
+        _mouseClick.performed -= EventManagerOnMouseHeld;
         _ismouseClicked = false;
 
         _mouseClick.Disable();
     }
-
-    public void MousePressed(InputAction.CallbackContext context)
+    private void EventManagerOnMouseHeld(InputAction.CallbackContext context)
     {
+        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-
-            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
             {
-                if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
-                {
 
-                    StartCoroutine(DragUpdate(hit.collider.gameObject));
-                }
+                StartCoroutine(DragUpdate(hit.collider.gameObject));
 
             }
-        
 
-        
+        }
     }
+    
     private void Update()
     {
         Debug.Log("Mouse Position: " + gameObject.transform.position);
@@ -114,6 +112,7 @@ public class CandyInterations : MonoBehaviour
         {
             _childInteractions = FindObjectOfType<ChildController>();
         }
+
         
     }
     private void OnCollisionEnter(Collision other)
@@ -194,14 +193,14 @@ public class CandyInterations : MonoBehaviour
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
 
-                Vector3 _clickedObjectz = new Vector3(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).x, _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()).y);
+                Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z));
+                //_clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
 
-                _clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
-                clickedObject.transform.position = _clickedObjectz;
+                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+                clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z)); ;
 
-                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
-                
 
+                Debug.DrawRay(ray.origin,ray.direction,Color.red);
                 yield return _waitForFixedUpdate;
             }
             else

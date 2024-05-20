@@ -13,15 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "humanMouseClick",
-                    "type": "Value",
-                    "id": "0e2678ba-0c33-45d0-bff4-e3c326a90f30",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -33,17 +24,6 @@
                     "processors": "",
                     "groups": "GameControl",
                     "action": "mouseClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5f6462d5-6d02-4f5c-baf2-3e31ccf9b709",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "GameControl",
-                    "action": "humanMouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
