@@ -10,6 +10,7 @@ public class CandyInterations : MonoBehaviour
 {
 
     private InputAction _mouseClick;
+    private InputActionMap inputActions;
     private bool _ismouseClicked;
     private Rigidbody _rigidbody;
     [SerializeField]
@@ -56,7 +57,6 @@ public class CandyInterations : MonoBehaviour
     }
     private void Awake()
     {
-        
         _interactionscript = GetComponent<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
 
@@ -205,7 +205,7 @@ public class CandyInterations : MonoBehaviour
             }
             else
             {
-                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
                 yield return null;
             }
         }
