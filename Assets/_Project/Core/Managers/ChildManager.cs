@@ -12,6 +12,10 @@ public class ChildManager : MonoBehaviour
     [SerializeField]
     private GameObject _spawnObject;
     [SerializeField]
+    private GameObject _candyBag;
+    [SerializeField]
+    private GameObject _bagLocation;
+    [SerializeField]
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
     [SerializeField]
@@ -21,18 +25,14 @@ public class ChildManager : MonoBehaviour
     private bool _canSpawn = true;
 
     private int _childCount = 10;
-
     
     // Start is called before the first frame update
     void Start()
     {
         if (_childCount <= 10 && _canSpawn && !_isChildSpawned)
             StartCoroutine(SpawnObjects());
-    }
-
-    void SetCanSpawn()
-    {
-        _canSpawn = true;
+        if(_isChildSpawned && !_canSpawn && !_candyBag.activeSelf)
+            DespawnObjects();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,17 +50,27 @@ public class ChildManager : MonoBehaviour
     /// <summary>
     /// Spawns objects continuously while canSpawn is true.
     /// </summary>
-    /// <returns></returns>
     public IEnumerator SpawnObjects()
     {
         while (_canSpawn)
         {
-            //Create a new enemy in the scene
-            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, transform.rotation);
             //Pause for the given time in seconds before resuming the function
             yield return new WaitForSeconds(_timeBetweenSpawns);
+            //Create a new enemy in the scene
+            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, transform.rotation);
             //Subtract from child count
             _childCount--;
+        }
+    }
+
+    /// <summary>
+    /// Despawns Objects when condition is met
+    /// </summary>
+    public void DespawnObjects()
+    {
+        while (!_candyBag.activeSelf)
+        {
+            _spawnObject.SetActive(false);
         }
     }
 }
