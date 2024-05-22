@@ -24,7 +24,8 @@ public class PointsTimer : MonoBehaviour
     private ChildController _childInteractions;
     [SerializeField]
     private DoorInteractionScript _doorInteraction;
-
+    [SerializeField]
+    private float _secondstowait = 1f;
     public bool MaxReached()
     {
         if (_totalgivencandy >= _maxkids)
@@ -53,7 +54,7 @@ public class PointsTimer : MonoBehaviour
         {
 
                 // Wait for 1 second
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(_secondstowait);
                 // Decrease points
                 _localpoints -= _decreaseRate;
                 //Debug.Log(_localpoints);
