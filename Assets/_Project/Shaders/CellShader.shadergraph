@@ -89,6 +89,9 @@
         },
         {
             "m_Id": "8401bfddd8574ede8956df87a974cb2e"
+        },
+        {
+            "m_Id": "0ff6dad4fe6f40ce9c81908fae131000"
         }
     ],
     "m_GroupDatas": [
@@ -337,6 +340,9 @@
             },
             {
                 "m_Id": "f96d8d67a6f14f8886770a5bf7a00cc5"
+            },
+            {
+                "m_Id": "0ff6dad4fe6f40ce9c81908fae131000"
             }
         ]
     },
@@ -358,6 +364,39 @@
             "m_Id": "da9e88950b454e0f9928ee21a3e7fa3c"
         }
     ]
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "0ff6dad4fe6f40ce9c81908fae131000",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Smoothness",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "370de102026a49e08f8e837ab1b040f8"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Smoothness"
 }
 
 {
@@ -713,6 +752,21 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "370de102026a49e08f8e837ab1b040f8",
+    "m_Id": 0,
+    "m_DisplayName": "Smoothness",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Smoothness",
+    "m_StageCapability": 2,
+    "m_Value": -6.699999809265137,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
 }
 
 {
@@ -2032,9 +2086,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -2299,8 +2353,8 @@
     "m_AlphaMode": 0,
     "m_RenderFace": 2,
     "m_AlphaClip": false,
-    "m_CastShadows": true,
-    "m_ReceiveShadows": true,
+    "m_CastShadows": false,
+    "m_ReceiveShadows": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
 }
