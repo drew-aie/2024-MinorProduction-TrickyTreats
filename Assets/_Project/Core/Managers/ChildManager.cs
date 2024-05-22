@@ -17,19 +17,19 @@ public class ChildManager : MonoBehaviour
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
     [SerializeField]
-    private float _timeBetweenSpawns = 15f;
+    private float _timeBetweenSpawns = 16f;
     [Tooltip("If false, the spawner will stop instantiating clones of the reference.")]
     [SerializeField]
     private bool _canSpawn = true;
 
     private int _childCount = 10;
-    
-    // Start is called before the first frame update
-    void Start()
+    private GameObject _currentChild;
+
+    private void Update()
     {
         if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
-            StartCoroutine(SpawnObjects());
-        if(_isChildSpawned == true && _canSpawn == false && _candyBag.activeSelf == false)
+            SpawnObjects();
+        if (_isChildSpawned == true && _canSpawn == false && _candyBag.activeSelf == false)
             DespawnObjects();
     }
 
@@ -44,20 +44,19 @@ public class ChildManager : MonoBehaviour
         _canSpawn = false;
         _isChildSpawned = true;
     }
+
     /// <summary>
     /// Spawns objects continuously while canSpawn is true.
     /// </summary>
-    public IEnumerator SpawnObjects()
+    public void SpawnObjects()
     {
         while (_canSpawn == true)
         {
-            //Pause for the given time in seconds before resuming the function
-            yield return new WaitForSeconds(_timeBetweenSpawns);
             //Create a new enemy in the scene
-            GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, transform.rotation);
+            _currentChild = Instantiate(_spawnObject, transform.position, transform.rotation);
             //Subtract from child count
             _childCount--;
-            //Set _canSpawn && _isChildSpawned
+            //Set child to not spawn
             ChildCantSpawn();
         }
     }
@@ -65,11 +64,15 @@ public class ChildManager : MonoBehaviour
     /// <summary>
     /// Despawns Objects when condition is met
     /// </summary>
-    public void DespawnObjects()
+    public IEnumerator DespawnObjects()
     {
-        while (_canSpawn == false && _isChildSpawned == true && _candyBag.activeSelf == false)
+        while (_canSpawn == false && _isChildSpawned == true)
         {
-            Destroy(_spawnObject);
+            //Wait for number of seconds before despawning
+            yield return new WaitForSeconds(_timeBetweenSpawns);
+            //Set child to inactive
+            _currentChild.SetActive(false);
+            //Set child to spawn
             ChildCanSpawn();
         }
     }

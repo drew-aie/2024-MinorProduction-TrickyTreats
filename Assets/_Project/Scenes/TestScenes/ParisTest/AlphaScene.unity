@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028384, g: 0.2257142, b: 0.3069233, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028338, g: 0.22571342, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1240,6 +1240,7 @@ MonoBehaviour:
   _monster: {fileID: 40070784}
   _maxkids: 10
   _doorInteraction: {fileID: 1997291357}
+  _secondstowait: 1
 --- !u!4 &1662955469
 Transform:
   m_ObjectHideFlags: 0
