@@ -61,6 +61,9 @@ MonoBehaviour:
   _isChildSpawned: 0
   _spawnObject: {fileID: 919132149155446097, guid: 8089d598582ba5949b47cc91aea5c3c2,
     type: 3}
+  _candyBag: {fileID: 3962775629329129684, guid: 911e184d91528a94e835aa824363f131,
+    type: 3}
+  _bagLocation: {fileID: 0}
   _spawner: {fileID: 4622734369275690769}
   _timeBetweenSpawns: 6
   _canSpawn: 1

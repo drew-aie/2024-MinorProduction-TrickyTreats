@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ChildRandomizer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject _spawner;
+    [SerializeField]
+    private GameObject _spawnObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private GameObject[] _objectArray;
 }

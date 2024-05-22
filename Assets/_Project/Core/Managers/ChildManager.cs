@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent (typeof (SphereCollider))]
 public class ChildManager : MonoBehaviour
 {
     [SerializeField]
@@ -14,12 +14,10 @@ public class ChildManager : MonoBehaviour
     [SerializeField]
     private GameObject _candyBag;
     [SerializeField]
-    private GameObject _bagLocation;
-    [SerializeField]
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
     [SerializeField]
-    private float _timeBetweenSpawns = 6f;
+    private float _timeBetweenSpawns = 15f;
     [Tooltip("If false, the spawner will stop instantiating clones of the reference.")]
     [SerializeField]
     private bool _canSpawn = true;
@@ -29,30 +27,29 @@ public class ChildManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (_childCount <= 10 && _canSpawn && !_isChildSpawned)
+        if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
             StartCoroutine(SpawnObjects());
-        if(_isChildSpawned && !_canSpawn && !_candyBag.activeSelf)
+        if(_isChildSpawned == true && _canSpawn == false && _candyBag.activeSelf == false)
             DespawnObjects();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        _canSpawn = false;
-        _isChildSpawned = true;
-    }
-
-    private void OnTriggerExit(Collider other)
+    private void ChildCanSpawn()
     {
         _canSpawn = true;
         _isChildSpawned = false;
     }
 
+    private void ChildCantSpawn()
+    {
+        _canSpawn = false;
+        _isChildSpawned = true;
+    }
     /// <summary>
     /// Spawns objects continuously while canSpawn is true.
     /// </summary>
     public IEnumerator SpawnObjects()
     {
-        while (_canSpawn)
+        while (_canSpawn == true)
         {
             //Pause for the given time in seconds before resuming the function
             yield return new WaitForSeconds(_timeBetweenSpawns);
@@ -60,6 +57,8 @@ public class ChildManager : MonoBehaviour
             GameObject spawnedEnemy = Instantiate(_spawnObject, transform.position, transform.rotation);
             //Subtract from child count
             _childCount--;
+            //Set _canSpawn && _isChildSpawned
+            ChildCantSpawn();
         }
     }
 
@@ -68,9 +67,10 @@ public class ChildManager : MonoBehaviour
     /// </summary>
     public void DespawnObjects()
     {
-        while (!_candyBag.activeSelf)
+        while (_canSpawn == false && _isChildSpawned == true && _candyBag.activeSelf == false)
         {
-            _spawnObject.SetActive(false);
+            Destroy(_spawnObject);
+            ChildCanSpawn();
         }
     }
 }
