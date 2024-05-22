@@ -70,7 +70,7 @@ public class DoorInteractionScript : MonoBehaviour
         {
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
-
+            
             _isBagDestroyed = false;
             _isOpen = false;
 
