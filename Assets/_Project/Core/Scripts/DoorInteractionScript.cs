@@ -16,7 +16,13 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _candyBagPrefab;
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
-    [SerializeField]
+    private bool _isTraumatizable;
+    public bool IsTraumatizable
+    {
+        get { return _isTraumatizable; }
+        set { _isTraumatizable = value; }
+    }
+        [SerializeField]
     private Camera _mainCamera;
     public bool CandyBagActive
     {
@@ -70,11 +76,20 @@ public class DoorInteractionScript : MonoBehaviour
             }
 
         }
-        else if (_isBagDestroyed && _isOpen)
+        else if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
             
+            _isBagDestroyed = false;
+                _isOpen = false;
+          
+        }
+        else if (_isBagDestroyed && _isOpen && _isTraumatizable)
+        {
+            // Close the door
+            _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera;
+
             _isBagDestroyed = false;
             _isOpen = false;
 
@@ -89,7 +104,8 @@ public class DoorInteractionScript : MonoBehaviour
     }
     public void TraumatizeCamera()
     {
-       
-        _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
+        
+            _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
+        
     }
 }
