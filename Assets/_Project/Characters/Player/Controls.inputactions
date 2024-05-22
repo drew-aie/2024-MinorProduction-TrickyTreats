@@ -1,0 +1,46 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "73f4e933-5aec-496d-9444-6186b965f1cc",
+            "actions": [
+                {
+                    "name": "mouseClick",
+                    "type": "Value",
+                    "id": "ab8e2fa2-8484-4e95-a696-ac11f2a77ccd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8439ca4e-b87b-4771-8f45-9d2bb650c8d5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GameControl",
+                    "action": "mouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "GameControl",
+            "bindingGroup": "GameControl",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
