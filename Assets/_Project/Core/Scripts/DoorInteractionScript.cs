@@ -18,7 +18,10 @@ public class DoorInteractionScript : MonoBehaviour
     private bool _isBagDestroyed = false;
     [SerializeField]
     private Camera _mainCamera;
-
+    public bool CandyBagActive
+    {
+        get { return _currentCandyBag.activeSelf; }
+    }
     private void Awake()
     {
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
@@ -31,6 +34,7 @@ public class DoorInteractionScript : MonoBehaviour
         set { _isOpen = value; }
 
     }
+    
     private void OnEnable()
     {
         _mouseClick.Enable();
@@ -85,6 +89,7 @@ public class DoorInteractionScript : MonoBehaviour
     }
     public void TraumatizeCamera()
     {
+       
         _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
     }
 }
