@@ -194,7 +194,6 @@ public class CandyInterations : MonoBehaviour
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
 
                 Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z));
-                //_clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
 
                 clickedObject.transform.position = Vector3.SmoothDamp(new Vector3(clickedObject.transform.position.x,clickedObject.transform.position.y,_startingPosition.z), ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
                 clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z)); ;
