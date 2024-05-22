@@ -85,6 +85,6 @@ public class DoorInteractionScript : MonoBehaviour
     }
     public void TraumatizeCamera()
     {
-        _mainCamera.GetComponent<CameraShake>().AddTrauma(.8f);
+        _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
     }
 }

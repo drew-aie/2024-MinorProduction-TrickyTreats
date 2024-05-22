@@ -10,6 +10,7 @@ public class CandyInterations : MonoBehaviour
 {
 
     private InputAction _mouseClick;
+    private InputActionMap inputActions;
     private bool _ismouseClicked;
     private Rigidbody _rigidbody;
     [SerializeField]
@@ -52,11 +53,10 @@ public class CandyInterations : MonoBehaviour
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
     private void Start()
     {
-                _startingPosition = gameObject.transform.position;
+                _startingPosition = gameObject.GetComponent<Rigidbody>().transform.position;
     }
     private void Awake()
     {
-        
         _interactionscript = GetComponent<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
 
@@ -91,7 +91,7 @@ public class CandyInterations : MonoBehaviour
         {
             if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
             {
-
+                
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
 
             }
@@ -194,9 +194,8 @@ public class CandyInterations : MonoBehaviour
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
 
                 Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z));
-                //_clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
 
-                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+                clickedObject.transform.position = Vector3.SmoothDamp(new Vector3(clickedObject.transform.position.x,clickedObject.transform.position.y,_startingPosition.z), ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
                 clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z)); ;
 
 
