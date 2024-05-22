@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.EventSystems;
 
 public class CandyInterations : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class CandyInterations : MonoBehaviour
     private DoorInteractionScript _doorInteraction;
 
     private Vector3 _startingPosition;
+    [SerializeField]
     private Camera _mainCamera;
     private Vector3 _velocity;
     private PointsTimer _pointsTimer;
@@ -48,69 +50,75 @@ public class CandyInterations : MonoBehaviour
         set { _ismouseClicked = value; }
     }
     private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
+    private void Start()
+    {
+                _startingPosition = gameObject.transform.position;
+    }
     private void Awake()
     {
         
         _interactionscript = GetComponent<Interactionscript>();
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
-        _mainCamera = Camera.main;
+
         _rigidbody = GetComponent<Rigidbody>();
-        _startingPosition = gameObject.transform.position;
+
         _pointsTimer = FindObjectOfType<PointsTimer>();
         
     }
     
     private void OnEnable()
     {
+
         _mouseClick.Enable();
         IsMouseClicked = true;
-        _mouseClick.performed += MousePressed;
-        
+        _mouseClick.performed += EventManagerOnMouseHeld;
+
     }
     private void OnDisable()
     {
-        _mouseClick.performed -= MousePressed;
+
+        _mouseClick.performed -= EventManagerOnMouseHeld;
         _ismouseClicked = false;
 
         _mouseClick.Disable();
     }
-
-    public void MousePressed(InputAction.CallbackContext context)
+    private void EventManagerOnMouseHeld(InputAction.CallbackContext context)
     {
+        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-
-            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
             {
-                if (hit.collider.gameObject != null && (hit.collider.gameObject.CompareTag("Candy")))
-                {
 
-                    StartCoroutine(DragUpdate(hit.collider.gameObject));
-                }
+                StartCoroutine(DragUpdate(hit.collider.gameObject));
 
             }
-        
 
-        
+        }
     }
+    
     private void Update()
     {
+        Debug.Log("Mouse Position: " + gameObject.transform.position);
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
+
 
         }
         if (_childInteractions == null)
         {
             _childInteractions = FindObjectOfType<ChildController>();
         }
+
+        
     }
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Bowl"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
@@ -149,7 +157,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _doorInteraction.TraumatizeCamera();
 
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
@@ -160,7 +168,7 @@ public class CandyInterations : MonoBehaviour
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
                     Debug.Log(_monsterCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _doorInteraction.TraumatizeCamera();
                 }
             }
             else
@@ -182,17 +190,17 @@ public class CandyInterations : MonoBehaviour
             Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (rb != null)
             {
-
                 Vector3 _direction = ray.GetPoint(_initialDistance) - clickedObject.transform.position;
-
                 rb.velocity = _direction * _mouseDragPhysicsSpeed;
-                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
 
-                Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, _startingPosition.z);
+                Vector3 _clickedObjectz = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z));
+                //_clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
 
-                _clickedObjectz.z = Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z);
-                clickedObject.transform.position = _clickedObjectz;
+                //clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(_initialDistance), ref _velocity, _mouseDragSpeed);
+                clickedObject.transform.position = new Vector3(clickedObject.transform.position.x, clickedObject.transform.position.y, Mathf.Clamp(clickedObject.transform.position.z, _startingPosition.z, _startingPosition.z)); ;
 
+
+                Debug.DrawRay(ray.origin,ray.direction,Color.red);
                 yield return _waitForFixedUpdate;
             }
             else

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6351188256110244164}
   m_Layer: 0
   m_Name: The Candy Bag
-  m_TagString: Candy
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3149930912088678964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.198, y: -0.222, z: 5.413}
-  m_LocalScale: {x: 0.2640521, y: 0.2640521, z: 0.2640521}
+  m_LocalPosition: {x: 0.0039, y: 0.6148, z: -8.6097}
+  m_LocalScale: {x: 0.080762, y: 0.080762, z: 0.080762}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
