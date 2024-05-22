@@ -20,7 +20,7 @@ public class DoorInteractionScript : MonoBehaviour
     private Camera _mainCamera;
     public bool CandyBagActive
     {
-        get { return _currentCandyBag.activeSelf; }
+        get { return _isBagDestroyed; }
     }
     private void Awake()
     {
