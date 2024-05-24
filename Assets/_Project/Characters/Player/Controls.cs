@@ -35,15 +35,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""humanMouseClick"",
-                    ""type"": ""Value"",
-                    ""id"": ""0e2678ba-0c33-45d0-bff4-e3c326a90f30"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -60,12 +51,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5f6462d5-6d02-4f5c-baf2-3e31ccf9b709"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""cc4162f4-6296-4f82-b15d-80fed7fc2740"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""GameControl"",
-                    ""action"": ""humanMouseClick"",
+                    ""groups"": """",
+                    ""action"": ""mouseClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -89,7 +80,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
         m_Mouse_mouseClick = m_Mouse.FindAction("mouseClick", throwIfNotFound: true);
-        m_Mouse_humanMouseClick = m_Mouse.FindAction("humanMouseClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -150,13 +140,11 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Mouse;
     private IMouseActions m_MouseActionsCallbackInterface;
     private readonly InputAction m_Mouse_mouseClick;
-    private readonly InputAction m_Mouse_humanMouseClick;
     public struct MouseActions
     {
         private @Controls m_Wrapper;
         public MouseActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @mouseClick => m_Wrapper.m_Mouse_mouseClick;
-        public InputAction @humanMouseClick => m_Wrapper.m_Mouse_humanMouseClick;
         public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -169,9 +157,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @mouseClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
                 @mouseClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
                 @mouseClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMouseClick;
-                @humanMouseClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
-                @humanMouseClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
-                @humanMouseClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnHumanMouseClick;
             }
             m_Wrapper.m_MouseActionsCallbackInterface = instance;
             if (instance != null)
@@ -179,9 +164,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @mouseClick.started += instance.OnMouseClick;
                 @mouseClick.performed += instance.OnMouseClick;
                 @mouseClick.canceled += instance.OnMouseClick;
-                @humanMouseClick.started += instance.OnHumanMouseClick;
-                @humanMouseClick.performed += instance.OnHumanMouseClick;
-                @humanMouseClick.canceled += instance.OnHumanMouseClick;
             }
         }
     }
@@ -198,6 +180,5 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     public interface IMouseActions
     {
         void OnMouseClick(InputAction.CallbackContext context);
-        void OnHumanMouseClick(InputAction.CallbackContext context);
     }
 }

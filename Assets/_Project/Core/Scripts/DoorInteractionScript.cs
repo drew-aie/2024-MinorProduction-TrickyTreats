@@ -16,11 +16,20 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _candyBagPrefab;
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
+    private bool _isTraumatizable;
+    public bool IsTraumatizable
+    {
+        get { return _isTraumatizable; }
+        set { _isTraumatizable = value; }
+    }
+        [SerializeField]
     private Camera _mainCamera;
-
+    public bool CandyBagActive
+    {
+        get { return _isBagDestroyed; }
+    }
     private void Awake()
     {
-        _mainCamera = Camera.main;
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _currentCandyBag.SetActive(false);
@@ -31,6 +40,7 @@ public class DoorInteractionScript : MonoBehaviour
         set { _isOpen = value; }
 
     }
+    
     private void OnEnable()
     {
         _mouseClick.Enable();
@@ -66,10 +76,19 @@ public class DoorInteractionScript : MonoBehaviour
             }
 
         }
-        else if (_isBagDestroyed && _isOpen)
+        else if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
+            
+            _isBagDestroyed = false;
+                _isOpen = false;
+          
+        }
+        else if (_isBagDestroyed && _isOpen && _isTraumatizable)
+        {
+            // Close the door
+            _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera;
 
             _isBagDestroyed = false;
             _isOpen = false;
@@ -85,6 +104,8 @@ public class DoorInteractionScript : MonoBehaviour
     }
     public void TraumatizeCamera()
     {
-        _mainCamera.GetComponent<CameraShake>().AddTrauma(.8f);
+        
+            _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
+        
     }
 }
