@@ -79,7 +79,7 @@ public class RevisedTimerScript : MonoBehaviour
         //Debug.Log("Monster: " + _monster.MonsterCandy);
         //Debug.Log("Human: " + _human.HumanCandy);
         _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
-        Debug.Log("Points: " + _globalpoints);
+        Debug.Log("Points: " + _globalpoints.ToString("f1"));
 
     }
     public void AddPoints()
