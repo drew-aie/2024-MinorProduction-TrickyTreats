@@ -134,6 +134,7 @@ public class CandyInterations : MonoBehaviour
                 if (_interactionscript.CandyType && _childInteractions.ChildType)
                 {
                     _pointsTimer.AddPoints();
+                    _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
@@ -144,6 +145,7 @@ public class CandyInterations : MonoBehaviour
                 else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
                     _pointsTimer.AddPoints();
+                    _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
@@ -152,23 +154,23 @@ public class CandyInterations : MonoBehaviour
                 else if (!_interactionscript.CandyType && _childInteractions.ChildType)
                 {
                     _pointsTimer.RemovePoints();
-
+                    _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
-                    _doorInteraction.TraumatizeCamera();
-
+                    //_doorInteraction.TraumatizeCamera();
+                    
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.ChildType)
                 {
                     _pointsTimer.RemovePoints();
-
+                    _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
                     Debug.Log(_monsterCandyCount);
-                    _doorInteraction.TraumatizeCamera();
+                    //_doorInteraction.TraumatizeCamera();
                 }
             }
             else
