@@ -22,6 +22,7 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
     private bool _isTraumatizable;
+    [SerializeField]
     private PointsTimer _pointsTimer;
     AudioSource _audio;
     public bool IsTraumatizable

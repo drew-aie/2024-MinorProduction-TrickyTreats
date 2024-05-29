@@ -2216,8 +2216,10 @@ MonoBehaviour:
       m_Action: Mouse Click
       m_Flags: 0
     m_Flags: 0
+  _bagLocation: {fileID: 1503518875}
   _candyBagPrefab: {fileID: 3962775629329129684, guid: 911e184d91528a94e835aa824363f131,
     type: 3}
+  _pointsTimer: {fileID: 1662955468}
   _mainCamera: {fileID: 963194227}
 --- !u!65 &1997291358
 BoxCollider:

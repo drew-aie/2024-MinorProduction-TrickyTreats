@@ -49,9 +49,11 @@ public class PointsTimer : MonoBehaviour
     }
     public void StartDecreasing()
     {
+        
         StartCoroutine(DecreasePointsOverTime());
+        
     }
-    IEnumerator DecreasePointsOverTime()
+    public IEnumerator DecreasePointsOverTime()
     {
 
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
@@ -61,7 +63,7 @@ public class PointsTimer : MonoBehaviour
                 yield return new WaitForSeconds(_secondstowait);
                 // Decrease points
                 _localpoints -= _decreaseRate;
-                //Debug.Log(_localpoints);
+                Debug.Log(_localpoints);
 
             
         }
