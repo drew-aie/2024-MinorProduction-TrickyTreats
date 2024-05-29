@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3962775629329129686}
   - component: {fileID: 3962775629329129685}
   - component: {fileID: 3962775629329129705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CandyBag
   m_TagString: Finish
   m_Icon: {fileID: 0}
