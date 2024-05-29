@@ -259,6 +259,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3262742775708458804, guid: aa5d68c7f27b18d40b3eb694714410fc,
+        type: 3}
+      propertyPath: _objectArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 7185029004555714120, guid: 620b3d7967bcade43b81559b927c6ee4,
+        type: 3}
+    - target: {fileID: 3262742775708458804, guid: aa5d68c7f27b18d40b3eb694714410fc,
+        type: 3}
+      propertyPath: _objectArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 92863742390888986, guid: fcfbd033078d2404fac980a5127432ff,
+        type: 3}
     - target: {fileID: 6148388835354724135, guid: aa5d68c7f27b18d40b3eb694714410fc,
         type: 3}
       propertyPath: m_Name
@@ -347,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261332075}
   m_LocalRotation: {x: -0.18176962, y: 0.89515066, z: 0.39436987, w: -0.100685835}
-  m_LocalPosition: {x: 0.03, y: 5.73, z: 2.21}
+  m_LocalPosition: {x: 0.21, y: 5.73, z: 2.21}
   m_LocalScale: {x: 0.6320857, y: 0.98846513, z: 0.99397016}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2540,6 +2552,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7254779933329127787, guid: 88526076fb8ac164aa672b5522e9c500,
+        type: 3}
+      propertyPath: _objectArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 7185029004555714120, guid: 620b3d7967bcade43b81559b927c6ee4,
+        type: 3}
+    - target: {fileID: -7254779933329127787, guid: 88526076fb8ac164aa672b5522e9c500,
+        type: 3}
+      propertyPath: _objectArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 92863742390888986, guid: fcfbd033078d2404fac980a5127432ff,
+        type: 3}
     - target: {fileID: 4067076828683080317, guid: 88526076fb8ac164aa672b5522e9c500,
         type: 3}
       propertyPath: _door
@@ -2574,7 +2598,7 @@ PrefabInstance:
     - target: {fileID: 4622734369275690768, guid: 88526076fb8ac164aa672b5522e9c500,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.075
+      value: 6.718
       objectReference: {fileID: 0}
     - target: {fileID: 4622734369275690768, guid: 88526076fb8ac164aa672b5522e9c500,
         type: 3}

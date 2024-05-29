@@ -54,6 +54,11 @@ public class CandyInterations : MonoBehaviour
     private void Start()
     {
                 _startingPosition = gameObject.GetComponent<Rigidbody>().transform.position;
+        if (_childInteractions == null)
+        {
+            _childInteractions = FindObjectOfType<ChildController>();
+
+        }
     }
     private void Awake()
     {
@@ -101,6 +106,9 @@ public class CandyInterations : MonoBehaviour
     
     private void Update()
     {
+
+            _childInteractions = FindObjectOfType<ChildController>();
+        
         Debug.Log("Mouse Position: " + gameObject.transform.position);
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
