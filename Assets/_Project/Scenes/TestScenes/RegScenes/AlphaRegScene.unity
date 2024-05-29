@@ -336,6 +336,7 @@ MonoBehaviour:
   _monster: {fileID: 1964504427}
   _maxkids: 10
   _doorInteraction: {fileID: 0}
+  _secondstowait: 1
 --- !u!4 &926193697
 Transform:
   m_ObjectHideFlags: 0

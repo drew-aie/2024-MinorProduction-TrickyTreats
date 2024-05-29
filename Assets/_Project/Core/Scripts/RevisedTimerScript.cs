@@ -6,7 +6,7 @@ public class RevisedTimerScript : MonoBehaviour
 {
 
     // Maximum points
-    private float _maxPoints = 1500f;
+    private float _maxPoints = 15000f;
     // total points
     private float _globalpoints;
     private float _localpoints;
