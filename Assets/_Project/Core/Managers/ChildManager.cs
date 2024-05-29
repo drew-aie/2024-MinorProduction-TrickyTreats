@@ -34,7 +34,7 @@ public class ChildManager : MonoBehaviour
     {
         if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
             SpawnObjects();
-        if (_isChildSpawned == true && _canSpawn == false && _candyBag.activeSelf == false)
+        if (_isChildSpawned == true && _canSpawn == false && !_candyBag.activeSelf)
             DespawnObjects();
     }
 
