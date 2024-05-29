@@ -9,7 +9,7 @@ public class ChildManager : MonoBehaviour
     [SerializeField]
     private bool _isChildSpawned = false;
     [SerializeField]
-    private GameObject _candyBag;
+    private DoorInteractionScript _door;
     [SerializeField]
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
@@ -28,13 +28,14 @@ public class ChildManager : MonoBehaviour
     private void Start()
     {
         _childRandom = _childRandomizer.GetRandom();
+        _door = FindObjectOfType<DoorInteractionScript>();
     }
 
     private void Update()
     {
         if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
             SpawnObjects();
-        if (_isChildSpawned == true && _canSpawn == false && !_candyBag.activeSelf)
+        if (_isChildSpawned == true && _canSpawn == false && _door.CandyBagActive)
             DespawnObjects();
     }
 
