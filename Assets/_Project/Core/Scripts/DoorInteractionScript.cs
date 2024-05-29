@@ -80,7 +80,7 @@ public class DoorInteractionScript : MonoBehaviour
             }
 
         }
-        else if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
+        if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
             _audio.PlayDelayed(.3f);
 
@@ -91,7 +91,7 @@ public class DoorInteractionScript : MonoBehaviour
                 _isOpen = false;
           
         }
-        else if (_isBagDestroyed && _isOpen && _isTraumatizable)
+        if (_isBagDestroyed && _isOpen && _isTraumatizable)
         {
             _audio.Play();
             // Close the door
