@@ -39,6 +39,8 @@ public class ChildManager : MonoBehaviour
             DespawnObjects();
     }
 
+    public GameObject CurrentChild { get { return _currentChild; } }
+
     private void ChildCanSpawn()
     {
         _canSpawn = true;
