@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3962775629329129686}
   - component: {fileID: 3962775629329129685}
   - component: {fileID: 3962775629329129705}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: CandyBag
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3962775629329129684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.198, y: -0.222, z: 5.413}
+  m_LocalPosition: {x: 1.1, y: 0.018, z: 6.59}
   m_LocalScale: {x: 0.2640521, y: 0.2640521, z: 0.2640521}
   m_ConstrainProportionsScale: 0
   m_Children: []

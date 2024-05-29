@@ -40,12 +40,16 @@ public class PointsTimer : MonoBehaviour
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
-        StartCoroutine(DecreasePointsOverTime());
+        
 
     }
     private void Update()
     {
 
+    }
+    public void StartDecreasing()
+    {
+        StartCoroutine(DecreasePointsOverTime());
     }
     IEnumerator DecreasePointsOverTime()
     {
