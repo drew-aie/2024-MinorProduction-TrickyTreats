@@ -14,7 +14,7 @@ public class ChildManager : MonoBehaviour
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
     [SerializeField]
-    private float _timeBetweenSpawns = 16f;
+    private float _timeBetweenSpawns = 3f;
     [Tooltip("If false, the spawner will stop instantiating clones of the reference.")]
     [SerializeField]
     private bool _canSpawn = true;
@@ -78,12 +78,10 @@ public class ChildManager : MonoBehaviour
     /// <summary>
     /// Despawns Objects when condition is met
     /// </summary>
-    public IEnumerator DespawnObjects()
+    public void DespawnObjects()
     {
         while (_canSpawn == false && _isChildSpawned == true)
         {
-            //Wait for number of seconds before despawning
-            yield return new WaitForSeconds(_timeBetweenSpawns);
             //Set child to inactive
             _currentChild.SetActive(false);
             //Set child to spawn
