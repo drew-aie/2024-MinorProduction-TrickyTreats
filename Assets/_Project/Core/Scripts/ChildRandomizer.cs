@@ -6,8 +6,6 @@ using UnityEngine;
 public class ChildRandomizer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _spawner;
-    [SerializeField]
     private GameObject[] _objectArray;
 
     private void Start()

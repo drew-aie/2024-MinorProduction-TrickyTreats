@@ -19,10 +19,16 @@ public class ChildManager : MonoBehaviour
     [SerializeField]
     private bool _canSpawn = true;
     [SerializeField]
-    ChildRandomizer childRandom;
+    private ChildRandomizer _childRandomizer;
 
+    private GameObject _childRandom;
     private int _childCount = 10;
     private GameObject _currentChild;
+
+    private void Start()
+    {
+        _childRandom = _childRandomizer.GetRandom();
+    }
 
     private void Update()
     {
@@ -44,15 +50,24 @@ public class ChildManager : MonoBehaviour
         _isChildSpawned = true;
     }
 
+    private void Randomize()
+    {
+        _childRandom = _childRandomizer.GetRandom();
+    }
+
     /// <summary>
     /// Spawns objects continuously while canSpawn is true.
     /// </summary>
     public void SpawnObjects()
     {
+        Randomize();
         while (_canSpawn == true)
         {
+            //Check if child is null
+            if (_childRandom == null)
+                Randomize();
             //Create a new enemy in the scene
-            _currentChild = Instantiate(_spawnObject, transform.position, transform.rotation);
+            _currentChild = Instantiate(_childRandom, transform.position, transform.rotation);
             //Subtract from child count
             _childCount--;
             //Set child to not spawn
