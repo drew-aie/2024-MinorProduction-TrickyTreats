@@ -17,6 +17,7 @@ public class DoorInteractionScript : MonoBehaviour
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
     private bool _isTraumatizable;
+    AudioSource _audio;
     public bool IsTraumatizable
     {
         get { return _isTraumatizable; }
@@ -30,6 +31,9 @@ public class DoorInteractionScript : MonoBehaviour
     }
     private void Awake()
     {
+        _audio = GetComponent<AudioSource>();
+        _audio.playOnAwake = false;
+
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _currentCandyBag.SetActive(false);
@@ -78,6 +82,8 @@ public class DoorInteractionScript : MonoBehaviour
         }
         else if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
+            _audio.PlayDelayed(.3f);
+
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
             
@@ -87,8 +93,9 @@ public class DoorInteractionScript : MonoBehaviour
         }
         else if (_isBagDestroyed && _isOpen && _isTraumatizable)
         {
+            _audio.Play();
             // Close the door
-            _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera;
+            _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera ;
 
             _isBagDestroyed = false;
             _isOpen = false;
