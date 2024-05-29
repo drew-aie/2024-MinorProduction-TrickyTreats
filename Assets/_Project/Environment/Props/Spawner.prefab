@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4622734369275690768}
   - component: {fileID: -3881325423079041231}
   - component: {fileID: 4067076828683080317}
+  - component: {fileID: -7254779933329127787}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -63,7 +64,24 @@ MonoBehaviour:
     type: 3}
   _candyBag: {fileID: 3962775629329129684, guid: 911e184d91528a94e835aa824363f131,
     type: 3}
-  _bagLocation: {fileID: 0}
   _spawner: {fileID: 4622734369275690769}
   _timeBetweenSpawns: 6
   _canSpawn: 1
+--- !u!114 &-7254779933329127787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622734369275690769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47dbfbe7698d149b1d79d86ecbbe55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner: {fileID: 4622734369275690769}
+  _objectArray:
+  - {fileID: 2509340121180152294, guid: 239bb6e8fd2a75849bf21d78153c79d3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

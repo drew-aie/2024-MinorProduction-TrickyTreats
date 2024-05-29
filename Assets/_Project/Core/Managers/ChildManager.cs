@@ -8,9 +8,6 @@ public class ChildManager : MonoBehaviour
 {
     [SerializeField]
     private bool _isChildSpawned = false;
-    [Tooltip("The object that will be instantiated.")]
-    [SerializeField]
-    private GameObject _spawnObject;
     [SerializeField]
     private GameObject _candyBag;
     [SerializeField]
@@ -21,6 +18,8 @@ public class ChildManager : MonoBehaviour
     [Tooltip("If false, the spawner will stop instantiating clones of the reference.")]
     [SerializeField]
     private bool _canSpawn = true;
+    [SerializeField]
+    ChildRandomizer childRandom;
 
     private int _childCount = 10;
     private GameObject _currentChild;
