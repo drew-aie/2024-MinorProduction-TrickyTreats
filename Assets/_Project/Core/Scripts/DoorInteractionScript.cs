@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class DoorInteractionScript : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +26,14 @@ public class DoorInteractionScript : MonoBehaviour
     [SerializeField]
     private PointsTimer _pointsTimer;
     AudioSource _audio;
+    [SerializeField]
+    AudioClip _doorOpen;
+    [SerializeField]
+    AudioClip _doorClose;
+    [SerializeField]
+    AudioClip _doorSlam;
+    [SerializeField]
+    private ChildManager _childInteractions;
     public bool IsTraumatizable
     {
         get { return _isTraumatizable; }
@@ -77,11 +86,14 @@ public class DoorInteractionScript : MonoBehaviour
                 if (!_isOpen && !_currentCandyBag.activeSelf && _mouseClick.triggered)
                 {
                     // Open the door
-                    
+                    _audio.clip = _doorOpen;
+
                     _door.transform.DORotate(new Vector3(0, -90, 0), 1).onComplete = _pointsTimer.StartDecreasing;
+                    _audio.Play();
+                    _childInteractions.CurrentChild.GetComponent<AudioSource>().Play();
                     // Spawn a new candy bag
                     _currentCandyBag.SetActive(true);
-                    _currentCandyBag.transform.DOMove(_bagLocation.transform.position, 3f);
+
                     _isBagDestroyed = false;
                     _isOpen = true;
                 }
@@ -91,10 +103,13 @@ public class DoorInteractionScript : MonoBehaviour
         }
         if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
+            _audio.clip = _doorClose;
             _audio.PlayDelayed(.3f);
 
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
+            _pointsTimer.StopDecreasingPoints();
+
             _currentCandyBag.SetActive(false);
             _isBagDestroyed = false;
                 _isOpen = false;
@@ -102,9 +117,11 @@ public class DoorInteractionScript : MonoBehaviour
         }
         if (_isBagDestroyed && _isOpen && _isTraumatizable)
         {
+            _audio.clip = _doorSlam;
             _audio.Play();
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera ;
+            _pointsTimer.StopDecreasingPoints();
             _currentCandyBag.SetActive(false);
             _isBagDestroyed = false;
             _isOpen = false;

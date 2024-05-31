@@ -27,16 +27,18 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private Camera _mainCamera;
     private Vector3 _velocity;
+    [SerializeField]
     private PointsTimer _pointsTimer;
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
     [SerializeField]
     private ChildManager _childInteractions;
-    [SerializeField]
-    private GameObject _currentChild;
     private Interactionscript _interactionscript;
-    
-    
+    AudioSource _audio;
+    [SerializeField]
+    AudioClip _rightAnswer;
+    [SerializeField]
+    AudioClip _wrongAnswer;
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -57,7 +59,8 @@ public class CandyInterations : MonoBehaviour
     private void Start()
     {
                 _startingPosition = gameObject.GetComponent<Rigidbody>().transform.position;
-
+        _audio = GetComponent<AudioSource>();
+        _audio.playOnAwake = false;
     }
     private void Awake()
     {
@@ -66,7 +69,7 @@ public class CandyInterations : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody>();
 
-        _pointsTimer = FindObjectOfType<PointsTimer>();
+
         
     }
     
@@ -139,6 +142,8 @@ public class CandyInterations : MonoBehaviour
                 // add a check for if the child is a monster or human and if you gave them the right candy
                 if (_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
+                    _audio.clip = _rightAnswer;
+                    _audio.PlayDelayed(1f);
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
@@ -151,6 +156,8 @@ public class CandyInterations : MonoBehaviour
                 else if (!_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.AddPoints();
+                    _audio.clip = _rightAnswer;
+                    _audio.PlayDelayed(1f);
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Human candy.");
@@ -160,6 +167,8 @@ public class CandyInterations : MonoBehaviour
                 else if (!_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
+                    _audio.clip = _wrongAnswer;
+                    _audio.PlayDelayed(1f);
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Monster child Human candy.");
@@ -171,6 +180,8 @@ public class CandyInterations : MonoBehaviour
                 else if (_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
+                    _audio.clip = _wrongAnswer;
+                    _audio.PlayDelayed(1f);
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
                     Debug.Log("You gave the Human child Monster candy.");
