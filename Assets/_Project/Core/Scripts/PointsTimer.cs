@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+<<<<<<< HEAD
 using TMPro;
 using DG.Tweening;
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 
 public class PointsTimer : MonoBehaviour
 {
-    // Text field for displaying time
-    [SerializeField]
-    private TMP_Text _Time;  
-    [SerializeField]
     // Maximum points
-
     private float _maxPoints = 1000f;
     // total points
+<<<<<<< HEAD
     int value = 0;
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
     private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
-    private float _decreaseRate;
+    [SerializeField]
+    private float _decreaseRate = 50f;
     [SerializeField]
     private CandyInterations _human;
     [SerializeField]
@@ -45,19 +47,26 @@ public class PointsTimer : MonoBehaviour
 
     private void Start()
     {
-
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
+<<<<<<< HEAD
         DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.InOutQuad);
         //_localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 
+=======
+        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
         
+
     }
     private void Update()
     {
+<<<<<<< HEAD
 
         _Time.text = _localpoints.ToString();
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 
     }
     public void StartDecreasing()
@@ -66,34 +75,43 @@ public class PointsTimer : MonoBehaviour
         StartCoroutine(DecreasePointsOverTime());
         
     }
-    IEnumerator DecreasePointsOverTime()
+    public IEnumerator DecreasePointsOverTime()
     {
 
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
 
                 // Wait for 1 second
+<<<<<<< HEAD
                 yield return new WaitForSeconds(0);
+=======
+                yield return new WaitForSeconds(_secondstowait);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
                 // Decrease points
-                _localpoints -= value;
-
+                _localpoints -= _decreaseRate;
                 Debug.Log(_localpoints);
 
             
         }
     }
 
-    public void StopDecreasingPoints()
+    private void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
+<<<<<<< HEAD
         //_localpoints = _maxPoints;
         Debug.Log("t=" + _totalgivencandy);
+=======
+         _localpoints = _maxPoints;
+        //Debug.Log(_totalgivencandy);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
     }
 
     public void OnOptionSelected()
     {
         // Call this function when an option is selected
         StopDecreasingPoints();
+
         _totalgivencandy += _monster.MonsterCandy + _human.HumanCandy;
         //Debug.Log("Monster: " + _monster.MonsterCandy);
         //Debug.Log("Human: " + _human.HumanCandy);
