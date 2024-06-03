@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using static UnityEngine.Rendering.DebugUI;
+
 
 public class PointsTimer : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class PointsTimer : MonoBehaviour
 
     private float _maxPoints = 1000f;
     // total points
-    float value = 0;
+    int value = 0;
     private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
@@ -48,21 +48,16 @@ public class PointsTimer : MonoBehaviour
 
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
-        DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.Linear);
-        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
+        DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.InOutQuad);
+        //_localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 
         
     }
     private void Update()
     {
-        value = Mathf.Clamp(value, 0, _maxPoints);
 
-        _Time.text = _localpoints.ToString("f0");
-        if (_localpoints <= 0)
-        {
-            _localpoints = 0;
+        _Time.text = _localpoints.ToString();
 
-        }
 
     }
     public void StartDecreasing()
@@ -78,7 +73,7 @@ public class PointsTimer : MonoBehaviour
         {
 
                 // Wait for 1 second
-                yield return new WaitForSeconds(.13f);
+                yield return new WaitForSeconds(0);
                 // Decrease points
                 _localpoints -= value;
 
@@ -91,7 +86,7 @@ public class PointsTimer : MonoBehaviour
     public void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
-        _localpoints = _maxPoints;
+        //_localpoints = _maxPoints;
         Debug.Log("t=" + _totalgivencandy);
     }
 
