@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/_Project/Scenes/TestScenes/RegScenes/RegMainMenu.unity
-    guid: ad965980c5945304e8ebb1a67b19d500
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/SprintReview/AlphaSprintReview.unity
     guid: 38d527ecb85006a4ebef3f9d2fd14972
+  - enabled: 1
+    path: Assets/_Project/Scenes/TestScenes/Haidon Test Scenes/BetaHaidonTestScenes/BetaHaidonTestScene.unity
+    guid: 99f8810489526a64ca68530747a4a244
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a8c6e3b48857af546a9818b5219d2c9c,
       type: 2}

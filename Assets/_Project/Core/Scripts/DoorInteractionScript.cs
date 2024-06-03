@@ -1,6 +1,8 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,10 +15,15 @@ public class DoorInteractionScript : MonoBehaviour
     [SerializeField]
     private InputAction _mouseClick;
     [SerializeField]
+    private GameObject _bagLocation;
+    private Vector3 _startPosition;
+    [SerializeField]
     private GameObject _candyBagPrefab;
     private GameObject _currentCandyBag;
     private bool _isBagDestroyed = false;
     private bool _isTraumatizable;
+    [SerializeField]
+    private PointsTimer _pointsTimer;
     AudioSource _audio;
     public bool IsTraumatizable
     {
@@ -33,10 +40,15 @@ public class DoorInteractionScript : MonoBehaviour
     {
         _audio = GetComponent<AudioSource>();
         _audio.playOnAwake = false;
-
+        GetComponent<Collider>().enabled = true;
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
+        _startPosition = _currentCandyBag.transform.position;
         _currentCandyBag.SetActive(false);
+    }
+    private void Start()
+    {
+        GetComponent<Collider>().enabled = true;
     }
     public bool Open
     {
@@ -70,9 +82,10 @@ public class DoorInteractionScript : MonoBehaviour
                 {
                     // Open the door
                     
-                    _door.transform.DORotate(new Vector3(0, -90, 0), 1);
+                    _door.transform.DORotate(new Vector3(0, -90, 0), 1).onComplete = _pointsTimer.StartDecreasing;
                     // Spawn a new candy bag
                     _currentCandyBag.SetActive(true);
+                    _currentCandyBag.transform.DOMove(_bagLocation.transform.position, 3f);
                     _isBagDestroyed = false;
                     _isOpen = true;
                 }
@@ -86,7 +99,7 @@ public class DoorInteractionScript : MonoBehaviour
 
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
-            
+            _currentCandyBag.SetActive(false);
             _isBagDestroyed = false;
                 _isOpen = false;
           
@@ -96,7 +109,7 @@ public class DoorInteractionScript : MonoBehaviour
             _audio.Play();
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera ;
-
+            _currentCandyBag.SetActive(false);
             _isBagDestroyed = false;
             _isOpen = false;
 
@@ -106,7 +119,8 @@ public class DoorInteractionScript : MonoBehaviour
     public void DestroyCandyBag()
     {
         // Destroy the current candy bag
-        _currentCandyBag.SetActive(false);
+        _currentCandyBag.transform.DOMove(_startPosition, 1f);
+        
         _isBagDestroyed = true;
     }
     public void TraumatizeCamera()
@@ -115,4 +129,15 @@ public class DoorInteractionScript : MonoBehaviour
             _mainCamera.GetComponent<CameraShake>().AddTrauma(.5f);
         
     }
+
+//    Game Sound Effects
+//Sonniss - Royalty Free Sound Effects Archive: GameAudioGDC - https://sonniss.com/gameaudiogdc
+//PMSFX SAMPLER 2022-2023 - https://www.pmsfx.store/product/pmsfx-sampler-2022/
+//FreeSound - https://freesound.org/
+//sfxr Generator - https://github.com/grimfang4/sfxr
+//Bosca Ceoil - https://boscaceoil.net/
+//Bensound - https://www.bensound.com/
+//Pixabay - https://pixabay.com/music/
+//FilmMusic - https://filmmusic.io/
+//Free Music Archive - https://freemusicarchive.org/
 }

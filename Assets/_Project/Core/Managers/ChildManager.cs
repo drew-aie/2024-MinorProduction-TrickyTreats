@@ -14,7 +14,7 @@ public class ChildManager : MonoBehaviour
     private GameObject _spawner;
     [Tooltip("The amount of time in seconds between each spawn.")]
     [SerializeField]
-    private float _timeBetweenSpawns = 3f;
+    private float _timeBetweenSpawns = 1f;
     [Tooltip("If false, the spawner will stop instantiating clones of the reference.")]
     [SerializeField]
     private bool _canSpawn = true;
