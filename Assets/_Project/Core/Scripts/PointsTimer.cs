@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using TMPro;
 using DG.Tweening;
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 
@@ -15,7 +18,10 @@ public class PointsTimer : MonoBehaviour
     private float _maxPoints = 1000f;
     // total points
 <<<<<<< HEAD
+<<<<<<< HEAD
     int value = 0;
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
     private float _globalpoints;
@@ -50,9 +56,13 @@ public class PointsTimer : MonoBehaviour
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
 <<<<<<< HEAD
+<<<<<<< HEAD
         DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.InOutQuad);
         //_localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 
+=======
+        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
@@ -62,9 +72,12 @@ public class PointsTimer : MonoBehaviour
     private void Update()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         _Time.text = _localpoints.ToString();
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 
@@ -83,7 +96,11 @@ public class PointsTimer : MonoBehaviour
 
                 // Wait for 1 second
 <<<<<<< HEAD
+<<<<<<< HEAD
                 yield return new WaitForSeconds(0);
+=======
+                yield return new WaitForSeconds(_secondstowait);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
                 yield return new WaitForSeconds(_secondstowait);
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
@@ -99,8 +116,13 @@ public class PointsTimer : MonoBehaviour
     {
         StopCoroutine(DecreasePointsOverTime());
 <<<<<<< HEAD
+<<<<<<< HEAD
         //_localpoints = _maxPoints;
         Debug.Log("t=" + _totalgivencandy);
+=======
+         _localpoints = _maxPoints;
+        //Debug.Log(_totalgivencandy);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
          _localpoints = _maxPoints;
         //Debug.Log(_totalgivencandy);
