@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -16,6 +17,7 @@ public class ChildRandomizer : MonoBehaviour
     public GameObject GetRandom()
     {
         GameObject rand = _objectArray[Random.Range(0, _objectArray.Length)];
+        Debug.Log(_objectArray.Length);
         return rand;
     }
 }
