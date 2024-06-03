@@ -91,6 +91,7 @@ MeshCollider:
   m_Mesh: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!82 &-2329459210065588037
 AudioSource:
   m_ObjectHideFlags: 0
@@ -188,6 +189,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
