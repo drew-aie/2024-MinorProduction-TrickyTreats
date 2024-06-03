@@ -56,7 +56,7 @@ public class PointsTimer : MonoBehaviour
     {
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
-        DOTween.To(() => value, (x) => value = x, 25, 10).SetRelative().SetEase(Ease.InExpo);
+        DOTween.To(() => value, (x) => value = x, 25, 10).SetRelative().SetEase(Ease.OutExpo);
         //_localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         _totalgivencandy = Mathf.Clamp(_totalgivencandy, 0, _maxkids);
         
@@ -65,13 +65,13 @@ public class PointsTimer : MonoBehaviour
     {
 
         _Kids.text = "Children in " + "<br>" + "Neighbourhood: " + "<br>" + _totalgivencandy.ToString() + "/" + _maxkids ;
-        if (_stopDecreasing == true)
+        if (_stopDecreasing)
         {
             _localpoints = 0;
             _Time.text = "0";
             StopDecreasingPoints();
         }
-        else if (_stopDecreasing == false && _localpoints <= 0)
+        else if (!_stopDecreasing && _localpoints <= 0)
         {
             _localpoints = 0;
             _Time.text = "0";
