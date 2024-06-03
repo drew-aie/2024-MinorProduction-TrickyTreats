@@ -49,11 +49,15 @@ public class DoorInteractionScript : MonoBehaviour
     {
         _audio = GetComponent<AudioSource>();
         _audio.playOnAwake = false;
-
+        GetComponent<Collider>().enabled = true;
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _startPosition = _currentCandyBag.transform.position;
         _currentCandyBag.SetActive(false);
+    }
+    private void Start()
+    {
+        GetComponent<Collider>().enabled = true;
     }
     public bool Open
     {
