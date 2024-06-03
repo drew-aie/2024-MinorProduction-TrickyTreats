@@ -107,7 +107,6 @@ public class CandyInterations : MonoBehaviour
     {
 
         
-        Debug.Log("Mouse Position: " + gameObject.transform.position);
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
