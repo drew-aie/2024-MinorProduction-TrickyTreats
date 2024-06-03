@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
+using DG.Tweening;
+
+
 
 public class PointsTimer : MonoBehaviour
 {
     // Maximum points
     private float _maxPoints = 1000f;
     // total points
+    float value = 0;
     private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
+    private float _decreaseRate;
     [SerializeField]
-    private float _decreaseRate = 50f;
+    private TMP_Text _Time;
     [SerializeField]
     private CandyInterations _human;
     [SerializeField]
@@ -39,25 +45,40 @@ public class PointsTimer : MonoBehaviour
     {
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
+        DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.Linear);
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
-        StartCoroutine(DecreasePointsOverTime());
 
+        
     }
     private void Update()
     {
+        value = Mathf.Clamp(value, 0, _maxPoints);
+
+        _Time.text = _localpoints.ToString("f0");
+        if (_localpoints <= 0)
+        {
+            _localpoints = 0;
+
+        }
 
     }
-    IEnumerator DecreasePointsOverTime()
+    public void StartDecreasing()
+    {
+        
+        StartCoroutine(DecreasePointsOverTime());
+        
+    }
+    public IEnumerator DecreasePointsOverTime()
     {
 
         while (_localpoints > 0 && _totalgivencandy < _maxkids)
         {
 
                 // Wait for 1 second
-                yield return new WaitForSeconds(_secondstowait);
+                yield return new WaitForSeconds(.13f);
                 // Decrease points
                 _localpoints -= _decreaseRate;
-                //Debug.Log(_localpoints);
+                Debug.Log(_localpoints);
 
             
         }
@@ -66,8 +87,8 @@ public class PointsTimer : MonoBehaviour
     private void StopDecreasingPoints()
     {
         StopCoroutine(DecreasePointsOverTime());
-         _localpoints = _maxPoints;
-        //Debug.Log(_totalgivencandy);
+        _localpoints = _maxPoints;
+        Debug.Log("t=" + _totalgivencandy);
     }
 
     public void OnOptionSelected()
