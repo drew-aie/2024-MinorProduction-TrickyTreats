@@ -5,9 +5,12 @@ using UnityEngine;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 using TMPro;
 using DG.Tweening;
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
@@ -23,7 +26,10 @@ public class PointsTimer : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     int value = 0;
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
@@ -64,9 +70,13 @@ public class PointsTimer : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         DOTween.To(() => value, (x) => value = x, 25, 5).SetRelative().SetEase(Ease.InOutQuad);
         //_localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 
+=======
+        _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
@@ -84,9 +94,12 @@ public class PointsTimer : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         _Time.text = _localpoints.ToString();
 
+=======
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
@@ -111,7 +124,11 @@ public class PointsTimer : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 yield return new WaitForSeconds(0);
+=======
+                yield return new WaitForSeconds(_secondstowait);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
                 yield return new WaitForSeconds(_secondstowait);
 >>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
@@ -135,8 +152,13 @@ public class PointsTimer : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //_localpoints = _maxPoints;
         Debug.Log("t=" + _totalgivencandy);
+=======
+         _localpoints = _maxPoints;
+        //Debug.Log(_totalgivencandy);
+>>>>>>> parent of 98ac4c7 (added a working points timer and sound effects)
 =======
          _localpoints = _maxPoints;
         //Debug.Log(_totalgivencandy);
