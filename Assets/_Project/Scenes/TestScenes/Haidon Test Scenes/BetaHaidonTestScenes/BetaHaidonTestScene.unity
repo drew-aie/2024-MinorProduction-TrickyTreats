@@ -2246,6 +2246,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 29.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a9e9156604206b4083d34a090ca7186,
+        type: 2}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3676591184847963064, guid: 2a9e9156604206b4083d34a090ca7186,
+        type: 2}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3150181835618569365, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
       propertyPath: m_Name
@@ -2321,6 +2353,11 @@ PrefabInstance:
       propertyPath: _doorInteraction
       value: 
       objectReference: {fileID: 1997291357}
+    - target: {fileID: 4119494321723780303, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
 --- !u!1001 &4622734369139344719
