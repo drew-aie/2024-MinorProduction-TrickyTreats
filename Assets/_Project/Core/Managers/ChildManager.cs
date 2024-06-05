@@ -23,6 +23,7 @@ public class ChildManager : MonoBehaviour
 
     private GameObject _childRandom;
     private int _childCount = 10;
+    private int _maxInactiveCount = 5;
     private GameObject _currentChild;
 
     private void Start()
@@ -35,7 +36,7 @@ public class ChildManager : MonoBehaviour
     {
         if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
             SpawnObjects();
-        if (_isChildSpawned == true && _canSpawn == false && _door.Open)
+        else if (_isChildSpawned == true && _canSpawn == false && !_door.Open)
             DespawnObjects();
     }
 
