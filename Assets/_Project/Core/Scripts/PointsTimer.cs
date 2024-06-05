@@ -64,7 +64,7 @@ public class PointsTimer : MonoBehaviour
     private void Update()
     {
 
-        _Kids.text = "Children in " + "<br>" + "Neighbourhood: " + "<br>" + _totalgivencandy.ToString() + "/" + _maxkids ;
+        _Kids.text = _totalgivencandy.ToString() + "/" + _maxkids ;
         if (_stopDecreasing)
         {
             _localpoints = 0;
