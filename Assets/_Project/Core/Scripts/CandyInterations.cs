@@ -5,6 +5,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class CandyInterations : MonoBehaviour
 {
@@ -30,7 +31,9 @@ public class CandyInterations : MonoBehaviour
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
     [SerializeField]
-    private ChildController _childInteractions;
+    private ChildManager _childInteractions;
+    [SerializeField]
+    private GameObject _currentChild;
     private Interactionscript _interactionscript;
     
     
@@ -54,6 +57,7 @@ public class CandyInterations : MonoBehaviour
     private void Start()
     {
                 _startingPosition = gameObject.GetComponent<Rigidbody>().transform.position;
+
     }
     private void Awake()
     {
@@ -101,17 +105,15 @@ public class CandyInterations : MonoBehaviour
     
     private void Update()
     {
-        Debug.Log("Mouse Position: " + gameObject.transform.position);
+
+        
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
 
 
         }
-        if (_childInteractions == null)
-        {
-            _childInteractions = FindObjectOfType<ChildController>();
-        }
+
 
         
     }
@@ -128,10 +130,13 @@ public class CandyInterations : MonoBehaviour
         {
             if (_giveBaglocation != null && _rigidbody.useGravity)
             {
-                
+                if (_childInteractions == null)
+                {
+                    _childInteractions = FindObjectOfType<ChildManager>();
+                }
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
-                if (_interactionscript.CandyType && _childInteractions.ChildType)
+                if (_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
@@ -142,7 +147,7 @@ public class CandyInterations : MonoBehaviour
 
 
                 }
-                else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
@@ -151,7 +156,7 @@ public class CandyInterations : MonoBehaviour
                     HumanCandy += 1;
                     Debug.Log(_humanCandyCount);
                 }
-                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
@@ -162,7 +167,7 @@ public class CandyInterations : MonoBehaviour
                     //_doorInteraction.TraumatizeCamera();
                     
                 }
-                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
