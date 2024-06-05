@@ -34,7 +34,7 @@ public class ChildManager : MonoBehaviour
 
     private void Update()
     {
-        if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false)
+        if (_childCount <= 10 && _canSpawn == true && _isChildSpawned == false && _door.Open)
             SpawnObjects();
         else if (_isChildSpawned == true && _canSpawn == false && !_door.Open)
             DespawnObjects();
@@ -65,7 +65,7 @@ public class ChildManager : MonoBehaviour
     public void SpawnObjects()
     {
         Randomize();
-        while (_canSpawn == true)
+        if (_canSpawn == true)
         {
             //Check if child is null
             if (_childRandom == null)
@@ -84,7 +84,7 @@ public class ChildManager : MonoBehaviour
     /// </summary>
     public void DespawnObjects()
     {
-        while (_canSpawn == false && _isChildSpawned == true)
+        if (_canSpawn == false && _isChildSpawned == true)
         {
             //Set child to inactive
             _currentChild.SetActive(false);
