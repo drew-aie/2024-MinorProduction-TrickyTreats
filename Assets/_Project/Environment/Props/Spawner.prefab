@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4622734369275690768}
   - component: {fileID: -3881325423079041231}
   - component: {fileID: 4067076828683080317}
+  - component: {fileID: -7254779933329127787}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -59,8 +60,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isChildSpawned: 0
-  _spawnObject: {fileID: 919132149155446097, guid: 8089d598582ba5949b47cc91aea5c3c2,
+  _candyBag: {fileID: 3962775629329129684, guid: 911e184d91528a94e835aa824363f131,
     type: 3}
   _spawner: {fileID: 4622734369275690769}
   _timeBetweenSpawns: 6
   _canSpawn: 1
+  _childRandomizer: {fileID: 3262742775708458804, guid: aa5d68c7f27b18d40b3eb694714410fc,
+    type: 3}
+--- !u!114 &-7254779933329127787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622734369275690769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af47dbfbe7698d149b1d79d86ecbbe55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectArray:
+  - {fileID: 919132149155446097, guid: 12a10db963acf544298d58dce612fe51, type: 3}
+  - {fileID: 919132149155446097, guid: 066ecad9cad2de1418c0ae4de7cf2aaa, type: 3}
