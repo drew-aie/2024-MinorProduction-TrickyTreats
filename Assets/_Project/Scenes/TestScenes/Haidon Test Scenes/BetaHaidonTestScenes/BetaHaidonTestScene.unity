@@ -2473,7 +2473,7 @@ PrefabInstance:
     - target: {fileID: 7509664209586074375, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
       propertyPath: _maxkids
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7509664209586074375, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}

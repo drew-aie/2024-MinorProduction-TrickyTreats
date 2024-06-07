@@ -35,8 +35,8 @@ public class CandyInterations : MonoBehaviour
     [SerializeField]
     private GameObject _currentChild;
     private Interactionscript _interactionscript;
-    
-    
+
+    private bool _answer;
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -47,7 +47,10 @@ public class CandyInterations : MonoBehaviour
         get { return _humanCandyCount; }
         set { _humanCandyCount = value; }
     }
-
+    public bool Answer
+    {
+        get { return _answer; }
+    }
     public bool IsMouseClicked
     {
         get { return _ismouseClicked; }
@@ -141,10 +144,8 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
-
+                    _answer = true;
 
                 }
                 else if (!_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
@@ -152,35 +153,34 @@ public class CandyInterations : MonoBehaviour
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
+
+                    _answer = true;
+
                 }
                 else if (!_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
-                    
+                    _answer = false;
+
+
                 }
                 else if (_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _answer = false;
+
                 }
             }
             else
             {
-                //Debug.Log("GiveBagLocation is already null");
+                Debug.Log("GiveBagLocation is already null");
             }
         }
     }

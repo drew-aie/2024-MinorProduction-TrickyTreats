@@ -61,7 +61,10 @@ public class PointsTimer : MonoBehaviour
         }
         return _maxReached;
     }
-
+    public float MaxKids
+    {
+        get { return _totalgivencandy; }
+    }
     private void Start()
     {
 
