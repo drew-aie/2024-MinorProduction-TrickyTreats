@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PointsTimer : MonoBehaviour
@@ -47,8 +48,11 @@ public class PointsTimer : MonoBehaviour
     private RawImage _timerBarFG;
     private float _timePercentage;
     [SerializeField]
-    private FadingPanel _Fade;
+    private FadeInOut _Fade;
     private Tweener _doTweenMove;
+    [SerializeField]
+    private TMP_Text _PointsDifference;
+
     public bool MaxReached()
     {
         if (_totalgivencandy >= _maxkids)
@@ -60,45 +64,45 @@ public class PointsTimer : MonoBehaviour
 
     private void Start()
     {
-        
+
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
-        _doTweenMove = DOTween.To(() => _value, (x) => _value = x, _decreaseRate, 10).SetEase(Ease.InOutExpo);
+        _doTweenMove = DOTween.To(() => _value, (x) => _value = x, _decreaseRate, 8).SetEase(Ease.InOutExpo);
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         _totalgivencandy = Mathf.Clamp(_totalgivencandy, 0, _maxkids);
         _value = Mathf.Clamp(_value, 0, 25);
+
 
     }
     private void Update()
     {
         
-        Debug.Log(_value);
+        
         _Kids.text = _totalgivencandy.ToString() + "/" + _maxkids ;
         if (_stopDecreasing)
         {
             _localpoints = 0;
-            _Time.text = "0";
+            
             StopDecreasingPoints();
         }
         else if (!_stopDecreasing && _localpoints <= 0)
         {
             _localpoints = 0;
-            _Time.text = "0";
+            
         }
         _timePercentage = Mathf.Clamp01(_localpoints / _maxPoints);
         Vector3 newScale = _timerBarFG.rectTransform.localScale;
         newScale.x = _timePercentage;
         _timerBarFG.rectTransform.localScale = newScale;
         _timerBarFG.color = _timerGradient.Evaluate(_timePercentage);
-        _Time.color = _timerBarFG.color;
-
-        _Time.text = _localpoints.ToString();
+        
         
         if (_totalgivencandy == _maxkids)
         {
             _doorInteraction.GetComponent<Collider>().enabled = false;
             _Kids.text = "<s>" + "Children in " + "<br>" + "Neighbourhood: " + "<br>" + _totalgivencandy.ToString() + "/" + _maxkids + "<s>";
             StopDecreasingPoints();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
@@ -116,7 +120,7 @@ public class PointsTimer : MonoBehaviour
         {
 
                 // Wait for 1 second
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.03f);
                 // Decrease points
                 _localpoints -= _value;
 
@@ -133,9 +137,10 @@ public class PointsTimer : MonoBehaviour
         StopCoroutine(DecreasePointsOverTime());
         _localpoints = _maxPoints;
 
-        if (_value == _decreaseRate)
+        if (_value <= _decreaseRate)
         {
-            _value = 1;
+            _value = 0;
+            _doTweenMove.Restart();
         }
     }
 
@@ -144,12 +149,10 @@ public class PointsTimer : MonoBehaviour
         // Call this function when an option is selected
         StopDecreasingPoints();
         
-        _TotalPoints.text = _globalpoints.ToString();
-        //_totalgivencandy = _monster.MonsterCandy + _human.HumanCandy;
-        //Debug.Log("Monster: " + _monster.MonsterCandy);
-        //Debug.Log("Human: " + _human.HumanCandy);
+        
+
         _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
-        //Debug.Log("Points: " + _globalpoints);
+
        
     }
     public void AddPoints()
@@ -160,14 +163,15 @@ public class PointsTimer : MonoBehaviour
             _globalpoints += _localpoints;
             
             _totalgivencandy++;
-
-
-
+            _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
+            
             _Fade.Fading();
-
+            _TotalPoints.text = _globalpoints.ToString();
+            _PointsDifference.text = "+" + _localpoints.ToString();
         }
 
     }
+
     public void RemovePoints()
     {
         
@@ -177,9 +181,11 @@ public class PointsTimer : MonoBehaviour
             
             _totalgivencandy++;
             _globalpoints = Mathf.Clamp(_globalpoints, 0, Mathf.Infinity);
+            
             _Fade.Fading();
-            
-            
+            _TotalPoints.text = _globalpoints.ToString();
+            _PointsDifference.text = "-" + _localpoints.ToString();
+
         }
 
     }

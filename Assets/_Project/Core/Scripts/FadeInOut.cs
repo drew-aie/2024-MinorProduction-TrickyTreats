@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadingPanel : MonoBehaviour
+public class FadeInOut : MonoBehaviour
 {
 	[SerializeField] 
 	private CanvasGroup canvasGroup;
@@ -49,9 +49,9 @@ public class FadingPanel : MonoBehaviour
 
 	private IEnumerator TestFade()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(.5f);
 		FadeIn(1f);
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1f);
 		FadeOut(1f);
 	}
 }

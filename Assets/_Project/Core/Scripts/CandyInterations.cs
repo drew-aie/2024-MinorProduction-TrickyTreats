@@ -128,7 +128,7 @@ public class CandyInterations : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
-            if (_giveBaglocation != null && _rigidbody.useGravity)
+            if (_giveBaglocation != null && _rigidbody.useGravity && !_mouseClick.IsPressed())
             {
                 if (_childInteractions == null)
                 {
