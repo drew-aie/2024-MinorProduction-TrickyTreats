@@ -3,18 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Surface
+  - Candy
+  - Wall
+  - Door
+  - Bowl
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Door
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Bowl
+  - Monster
+  - 'Human '
+  - UITimer
   - 
   - 
   - 
