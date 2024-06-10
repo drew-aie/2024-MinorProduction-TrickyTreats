@@ -18,7 +18,7 @@ public class ResultsScreenBehavior : MonoBehaviour
     //// Update is called once per frame
     void Update()
     {
-        Results.text = "Total Score: " + " <br>";
+        Results.text = "Total Score: " + " <br>"+ScoreManager.Instance.GetPoints.ToString();
     }
 
 
