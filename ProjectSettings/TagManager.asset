@@ -8,17 +8,18 @@ TagManager:
   - Candy
   - Wall
   - Door
+  - Bowl
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Door
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Bowl
+  - Monster
+  - 'Human '
+  - UITimer
   - 
   - 
   - 
