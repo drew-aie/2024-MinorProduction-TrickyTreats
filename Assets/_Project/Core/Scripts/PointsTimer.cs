@@ -52,8 +52,7 @@ public class PointsTimer : MonoBehaviour
     private Tweener _doTweenMove;
     [SerializeField]
     private TMP_Text _PointsDifference;
-    [SerializeField]
-    private ScoreManager _scoreManager;
+   
 
     public bool MaxReached()
     {
@@ -156,7 +155,7 @@ public class PointsTimer : MonoBehaviour
         
         
 
-        _scoreManager.SetPoints = Mathf.Clamp(_scoreManager.GetPoints, 0, Mathf.Infinity);
+        ScoreManager.Instance.SetPoints = Mathf.Clamp(ScoreManager.Instance.GetPoints, 0, Mathf.Infinity);
 
        
     }
@@ -165,13 +164,13 @@ public class PointsTimer : MonoBehaviour
         
         if (_totalgivencandy < _maxkids )
         {
-            _scoreManager.SetPoints = _scoreManager.GetPoints + _localpoints;
+            ScoreManager.Instance.SetPoints = ScoreManager.Instance.GetPoints + _localpoints;
             
             _totalgivencandy++;
-            _scoreManager.SetPoints = Mathf.Clamp(_scoreManager.GetPoints, 0, Mathf.Infinity);
+            ScoreManager.Instance.SetPoints = Mathf.Clamp(ScoreManager.Instance.GetPoints, 0, Mathf.Infinity);
             
             _Fade.Fading();
-            _TotalPoints.text = _scoreManager.GetPoints.ToString();
+            _TotalPoints.text = ScoreManager.Instance.GetPoints.ToString();
             _PointsDifference.text = "+" + _localpoints.ToString();
         }
 
@@ -182,13 +181,13 @@ public class PointsTimer : MonoBehaviour
         
         if (_totalgivencandy < _maxkids)
         {
-            _scoreManager.SetPoints = _scoreManager.GetPoints - _localpoints;
+            ScoreManager.Instance.SetPoints = ScoreManager.Instance.GetPoints - _localpoints;
             
             _totalgivencandy++;
-            _scoreManager.SetPoints = Mathf.Clamp(_scoreManager.GetPoints, 0, Mathf.Infinity);
+            ScoreManager.Instance.SetPoints = Mathf.Clamp(ScoreManager.Instance.GetPoints, 0, Mathf.Infinity);
             
             _Fade.Fading();
-            _TotalPoints.text = _scoreManager.GetPoints.ToString();
+            _TotalPoints.text = ScoreManager.Instance.GetPoints.ToString();
             _PointsDifference.text = "-" + _localpoints.ToString();
 
         }
