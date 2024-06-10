@@ -116,9 +116,13 @@ public class CandyInterations : MonoBehaviour
 
 
         }
+        if (_childInteractions == null)
+        {
+            _childInteractions = FindObjectOfType<ChildManager>();
+
+        }
 
 
-        
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -133,10 +137,7 @@ public class CandyInterations : MonoBehaviour
         {
             if (_giveBaglocation != null && _rigidbody.useGravity && !_mouseClick.IsPressed())
             {
-                if (_childInteractions == null)
-                {
-                    _childInteractions = FindObjectOfType<ChildManager>();
-                }
+
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
                 if (_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
