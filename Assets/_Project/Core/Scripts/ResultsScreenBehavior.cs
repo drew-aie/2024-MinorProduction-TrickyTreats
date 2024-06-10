@@ -24,6 +24,8 @@ public class ResultsScreenBehavior : MonoBehaviour
 
     public void BackToMain()
     {
+        ScoreManager.Instance.CanReset = true;
+        ScoreManager.Instance.ResetPoints();
         SceneManager.LoadScene(0);
     }
 

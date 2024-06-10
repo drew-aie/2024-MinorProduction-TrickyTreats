@@ -129,14 +129,4 @@ public class DoorInteractionScript : MonoBehaviour
         
     }
 
-//    Game Sound Effects
-//Sonniss - Royalty Free Sound Effects Archive: GameAudioGDC - https://sonniss.com/gameaudiogdc
-//PMSFX SAMPLER 2022-2023 - https://www.pmsfx.store/product/pmsfx-sampler-2022/
-//FreeSound - https://freesound.org/
-//sfxr Generator - https://github.com/grimfang4/sfxr
-//Bosca Ceoil - https://boscaceoil.net/
-//Bensound - https://www.bensound.com/
-//Pixabay - https://pixabay.com/music/
-//FilmMusic - https://filmmusic.io/
-//Free Music Archive - https://freemusicarchive.org/
 }
