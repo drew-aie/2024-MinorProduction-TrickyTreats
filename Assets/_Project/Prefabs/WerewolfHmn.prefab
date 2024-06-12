@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 4385446818616488975, guid: ce15254559190c348b7ba7bf716349b9,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: WerewolfHmn
       objectReference: {fileID: 0}
     - target: {fileID: 4733690005586617606, guid: ce15254559190c348b7ba7bf716349b9,
         type: 3}
@@ -221,6 +221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960768188131007919, guid: ce15254559190c348b7ba7bf716349b9,
+        type: 3}
+      propertyPath: _isMonster
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8745758473154478315, guid: ce15254559190c348b7ba7bf716349b9,
         type: 3}

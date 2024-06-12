@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1900795548043602892, guid: bea3291f12c8b514b85a1346e7050fd0,
+        type: 3}
+      propertyPath: _isMonster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4867620500618074326, guid: bea3291f12c8b514b85a1346e7050fd0,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 5244041142832431724, guid: bea3291f12c8b514b85a1346e7050fd0,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: ZombieMnstr
       objectReference: {fileID: 0}
     - target: {fileID: 5597158746386845604, guid: bea3291f12c8b514b85a1346e7050fd0,
         type: 3}

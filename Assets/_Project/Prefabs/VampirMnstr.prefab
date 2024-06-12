@@ -32,6 +32,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: fed539f665d690c4e80c801ecca8db91, type: 2}
+    - target: {fileID: 3363551263989450681, guid: c839db5119a065e4b8cf165fd5cf978d,
+        type: 3}
+      propertyPath: _isMonster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4145779573081201405, guid: c839db5119a065e4b8cf165fd5cf978d,
         type: 3}
       propertyPath: m_IsActive
@@ -190,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 8938471898957721113, guid: c839db5119a065e4b8cf165fd5cf978d,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: VampirMnstr
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c839db5119a065e4b8cf165fd5cf978d, type: 3}
