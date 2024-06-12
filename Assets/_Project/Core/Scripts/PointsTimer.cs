@@ -44,7 +44,7 @@ public class PointsTimer : MonoBehaviour
     [SerializeField]
     private Gradient _timerGradient;
     [SerializeField]
-    private RawImage _timerBarFG;
+    private Image _timerBarFG;
     private float _timePercentage;
     [SerializeField]
     private FadeInOut _Fade;

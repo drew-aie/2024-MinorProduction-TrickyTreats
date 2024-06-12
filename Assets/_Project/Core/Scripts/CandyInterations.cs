@@ -137,7 +137,9 @@ public class CandyInterations : MonoBehaviour
         {
             if (_giveBaglocation != null && _rigidbody.useGravity && !_mouseClick.IsPressed())
             {
-
+                _rigidbody.useGravity = false;
+                _rigidbody.velocity = Vector3.zero;
+                gameObject.transform.position = _startingPosition;
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
                 if (_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
