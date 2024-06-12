@@ -1580,3 +1580,5 @@ MonoBehaviour:
   _timerBarFG: {fileID: 5706124538783079146}
   _Fade: {fileID: 5021171681567096347}
   _PointsDifference: {fileID: 8823882381465538234}
+  _scoreManager: {fileID: 8218413037242361473, guid: 008cd5090a0227240a5c0b5a58c9be80,
+    type: 3}
