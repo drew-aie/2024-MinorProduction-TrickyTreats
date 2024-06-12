@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GhostHmnMouth_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: cbd3699f66417c04e88ff2f66b960a6f,
+  m_Shader: {fileID: -6465566751694194690, guid: 67f3b55ffc1d9d64886d2d69049bf812,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
