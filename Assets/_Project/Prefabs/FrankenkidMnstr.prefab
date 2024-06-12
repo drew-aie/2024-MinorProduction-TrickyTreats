@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 6149030526432806212, guid: 51d8a1ef41390784dbb4cab38bd94bf9,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: FrankenkidMnstr
       objectReference: {fileID: 0}
     - target: {fileID: 6641237238845408862, guid: 51d8a1ef41390784dbb4cab38bd94bf9,
         type: 3}
@@ -254,3 +254,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51d8a1ef41390784dbb4cab38bd94bf9, type: 3}
+--- !u!1 &1983640776322804188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6149030526432806212, guid: 51d8a1ef41390784dbb4cab38bd94bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5679866417784876184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5269534953576890492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983640776322804188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd65edebb89741f4c81efb06800fe053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isMonster: 1
