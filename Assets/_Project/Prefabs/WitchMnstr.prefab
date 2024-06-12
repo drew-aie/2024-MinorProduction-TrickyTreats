@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 1184377589939491516, guid: 1acd3ac575388eb498c16c8ff3b20ea8,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: WitchMnstr
       objectReference: {fileID: 0}
     - target: {fileID: 1593814938119804418, guid: 1acd3ac575388eb498c16c8ff3b20ea8,
         type: 3}
@@ -177,6 +177,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: fed539f665d690c4e80c801ecca8db91, type: 2}
+    - target: {fileID: 4812564580335172380, guid: 1acd3ac575388eb498c16c8ff3b20ea8,
+        type: 3}
+      propertyPath: _isMonster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7854995161045582773, guid: 1acd3ac575388eb498c16c8ff3b20ea8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

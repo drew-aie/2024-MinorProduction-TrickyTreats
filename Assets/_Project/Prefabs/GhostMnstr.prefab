@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 3141100121521571924, guid: 00598d2398a748942bd7221e8eebea62,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: GhostMnstr
       objectReference: {fileID: 0}
     - target: {fileID: 3307598099210013930, guid: 00598d2398a748942bd7221e8eebea62,
         type: 3}
@@ -287,5 +287,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 1cff9cef390a8ea4185f6f081acf0dc2, type: 2}
+    - target: {fileID: 8732766870509003252, guid: 00598d2398a748942bd7221e8eebea62,
+        type: 3}
+      propertyPath: _isMonster
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00598d2398a748942bd7221e8eebea62, type: 3}
