@@ -23,7 +23,6 @@ public class PointsTimer : MonoBehaviour
     private float _maxPoints = 1000f;
     // total points
     
-    private float _globalpoints;
     private float _localpoints;
     // Points decrease rate per second
     private int _value = 0;
@@ -52,7 +51,9 @@ public class PointsTimer : MonoBehaviour
     private Tweener _doTweenMove;
     [SerializeField]
     private TMP_Text _PointsDifference;
-   
+    private WaitForSeconds _waitForSeconds = new WaitForSeconds(0.03f);
+
+
 
     public bool MaxReached()
     {
@@ -66,16 +67,26 @@ public class PointsTimer : MonoBehaviour
     {
         get { return _totalgivencandy; }
     }
+
     private void Start()
     {
-
+        
+        if (_localpoints == 0)
+        {
+            _localpoints = _maxPoints;
+        }
+        
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
         _doTweenMove = DOTween.To(() => _value, (x) => _value = x, _decreaseRate, 8).SetEase(Ease.InOutExpo);
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         _totalgivencandy = Mathf.Clamp(_totalgivencandy, 0, _maxkids);
         _value = Mathf.Clamp(_value, 0, 25);
-
+        if (_value <= _decreaseRate)
+        {
+            _value = 0;
+            _doTweenMove.Restart();
+        }
 
     }
     private void Update()
@@ -123,8 +134,8 @@ public class PointsTimer : MonoBehaviour
         while ( _totalgivencandy < _maxkids)
         {
 
-                // Wait for 1 second
-                yield return new WaitForSeconds(0.03f);
+            // Wait for 1 second
+            yield return new WaitForFixedUpdate();
                 // Decrease points
                 _localpoints -= _value;
 

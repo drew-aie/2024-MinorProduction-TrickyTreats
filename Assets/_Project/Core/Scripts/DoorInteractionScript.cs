@@ -25,6 +25,12 @@ public class DoorInteractionScript : MonoBehaviour
     [SerializeField]
     private PointsTimer _pointsTimer;
     AudioSource _audio;
+    [SerializeField]
+    private AudioClip _OpenSlowly;
+    [SerializeField]
+    private AudioClip _CloseSlowly;
+    [SerializeField]
+    private AudioClip _Slam;
     public bool IsTraumatizable
     {
         get { return _isTraumatizable; }
@@ -81,7 +87,8 @@ public class DoorInteractionScript : MonoBehaviour
                 if (!_isOpen && !_currentCandyBag.activeSelf && _mouseClick.triggered)
                 {
                     // Open the door
-                    
+                    _audio.clip = _OpenSlowly;
+                    _audio.Play();
                     _door.transform.DORotate(new Vector3(0, -90, 0), 1).onComplete = _pointsTimer.StartDecreasing;
                     // Spawn a new candy bag
                     _currentCandyBag.SetActive(true);
@@ -94,7 +101,8 @@ public class DoorInteractionScript : MonoBehaviour
         }
         if (_isBagDestroyed && _isOpen  && !_isTraumatizable)
         {
-            _audio.PlayDelayed(.3f);
+            _audio.clip = _CloseSlowly;
+            _audio.Play();
 
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
@@ -105,6 +113,7 @@ public class DoorInteractionScript : MonoBehaviour
         }
         if (_isBagDestroyed && _isOpen && _isTraumatizable)
         {
+            _audio.clip = _Slam;
             _audio.Play();
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera ;
@@ -129,14 +138,4 @@ public class DoorInteractionScript : MonoBehaviour
         
     }
 
-//    Game Sound Effects
-//Sonniss - Royalty Free Sound Effects Archive: GameAudioGDC - https://sonniss.com/gameaudiogdc
-//PMSFX SAMPLER 2022-2023 - https://www.pmsfx.store/product/pmsfx-sampler-2022/
-//FreeSound - https://freesound.org/
-//sfxr Generator - https://github.com/grimfang4/sfxr
-//Bosca Ceoil - https://boscaceoil.net/
-//Bensound - https://www.bensound.com/
-//Pixabay - https://pixabay.com/music/
-//FilmMusic - https://filmmusic.io/
-//Free Music Archive - https://freemusicarchive.org/
 }

@@ -2477,6 +2477,9 @@ MonoBehaviour:
   _candyBagPrefab: {fileID: 3962775629329129684, guid: 911e184d91528a94e835aa824363f131,
     type: 3}
   _pointsTimer: {fileID: 1171667300}
+  _OpenSlowly: {fileID: 8300000, guid: 0430db0bf94fd9a4bb9727e2867e6342, type: 3}
+  _CloseSlowly: {fileID: 8300000, guid: 972a5f1f1247b01498e0a893ecc9e302, type: 3}
+  _Slam: {fileID: 8300000, guid: 2cda7f3dd5669514498fe2ab8cec1663, type: 3}
   _mainCamera: {fileID: 963194227}
 --- !u!65 &1997291358
 BoxCollider:
