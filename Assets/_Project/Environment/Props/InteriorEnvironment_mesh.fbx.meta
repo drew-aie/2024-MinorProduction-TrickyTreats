@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: f9bd74778a876434eab4f5e9258f3fc5
+guid: 13de75322211b6e40ae6e21ad53423c4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Celing_mat
+    second: {fileID: 2100000, guid: b8be2450e3d08524ab67a957924a17fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor_Mat
+    second: {fileID: 2100000, guid: ba3350e3e2ad1b644995be8c9680dcfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper_Mat
+    second: {fileID: 2100000, guid: 71a4553e806331740a9fc907a5a114df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Props_Mat
+    second: {fileID: 2100000, guid: 21456e61a81b7de4c8ada186b6bd6180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sidewalk_mat
+    second: {fileID: 2100000, guid: 8e32e36618417bd4098c8c80fc6db195, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_mat
+    second: {fileID: 2100000, guid: 9da3ff24a1bb811468395ceefb64ec10, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +77,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
