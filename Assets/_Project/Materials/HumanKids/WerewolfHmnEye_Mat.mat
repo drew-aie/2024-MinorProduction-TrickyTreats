@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlipbookTexture:
-        m_Texture: {fileID: 2800000, guid: 621970e06a720af40ac7c87fb3a22044, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3947d9808cfb5e4fa4faca6445a41af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:

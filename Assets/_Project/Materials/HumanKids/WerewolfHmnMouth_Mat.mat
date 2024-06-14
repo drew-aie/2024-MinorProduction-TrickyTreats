@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlipbookTexture:
-        m_Texture: {fileID: 2800000, guid: fcf20e95c19a7044c983ce21f1574bd2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7de5ca85edc494d48869a0b4577f5aed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -112,7 +112,7 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FlipbookHeight: 2
-    - _FlipbookTile: 0.28
+    - _FlipbookTile: -0.85
     - _FlipbookWidth: 4
     - _GlossMapScale: 0
     - _Glossiness: 0
