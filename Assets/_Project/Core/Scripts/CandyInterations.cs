@@ -5,6 +5,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class CandyInterations : MonoBehaviour
 {
@@ -30,10 +31,12 @@ public class CandyInterations : MonoBehaviour
     private float _monsterCandyCount = 0;
     private float _humanCandyCount = 0;
     [SerializeField]
-    private ChildController _childInteractions;
+    private ChildManager _childInteractions;
+    [SerializeField]
+    private GameObject _currentChild;
     private Interactionscript _interactionscript;
-    
-    
+
+    private bool _answer;
     public float MonsterCandy 
     {
         get { return _monsterCandyCount; }
@@ -44,7 +47,10 @@ public class CandyInterations : MonoBehaviour
         get { return _humanCandyCount; }
         set { _humanCandyCount = value; }
     }
-
+    public bool Answer
+    {
+        get { return _answer; }
+    }
     public bool IsMouseClicked
     {
         get { return _ismouseClicked; }
@@ -54,6 +60,7 @@ public class CandyInterations : MonoBehaviour
     private void Start()
     {
                 _startingPosition = gameObject.GetComponent<Rigidbody>().transform.position;
+
     }
     private void Awake()
     {
@@ -101,7 +108,8 @@ public class CandyInterations : MonoBehaviour
     
     private void Update()
     {
-        Debug.Log("Mouse Position: " + gameObject.transform.position);
+
+        
         if (_mouseClick.ReadValue<float>() != 0 && gameObject.transform.position != _startingPosition)
         {
             _rigidbody.useGravity = true;
@@ -110,10 +118,11 @@ public class CandyInterations : MonoBehaviour
         }
         if (_childInteractions == null)
         {
-            _childInteractions = FindObjectOfType<ChildController>();
+            _childInteractions = FindObjectOfType<ChildManager>();
+
         }
 
-        
+
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -126,56 +135,55 @@ public class CandyInterations : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
-            if (_giveBaglocation != null && _rigidbody.useGravity)
+            if (_giveBaglocation != null && _rigidbody.useGravity && !_mouseClick.IsPressed())
             {
-                
+                _rigidbody.useGravity = false;
+                _rigidbody.velocity = Vector3.zero;
+                gameObject.transform.position = _startingPosition;
                 _doorInteraction.DestroyCandyBag();
                 // add a check for if the child is a monster or human and if you gave them the right candy
-                if (_interactionscript.CandyType && _childInteractions.ChildType)
+                if (_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Monster child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
-
+                    _answer = true;
 
                 }
-                else if (!_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.AddPoints();
                     _doorInteraction.IsTraumatizable = false;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Human child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
+
+                    _answer = true;
+
                 }
-                else if (!_interactionscript.CandyType && _childInteractions.ChildType)
+                else if (!_interactionscript.CandyType && _childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Monster child Human candy.");
                     HumanCandy += 1;
-                    Debug.Log(_humanCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
-                    
+                    _answer = false;
+
+
                 }
-                else if (_interactionscript.CandyType && !_childInteractions.ChildType)
+                else if (_interactionscript.CandyType && !_childInteractions.CurrentChild.GetComponent<ChildController>().ChildType)
                 {
                     _pointsTimer.RemovePoints();
                     _doorInteraction.IsTraumatizable = true;
                     _pointsTimer.OnOptionSelected();
-                    Debug.Log("You gave the Human child Monster candy.");
                     MonsterCandy += 1;
-                    Debug.Log(_monsterCandyCount);
-                    //_doorInteraction.TraumatizeCamera();
+                    _answer = false;
+
                 }
             }
             else
             {
-                //Debug.Log("GiveBagLocation is already null");
+                Debug.Log("GiveBagLocation is already null");
             }
         }
     }

@@ -10,6 +10,7 @@ public class TimerBehavior : MonoBehaviour
     [SerializeField]
     private float _time;
 
+    
     public float GetTime
     {
         get => _time;
