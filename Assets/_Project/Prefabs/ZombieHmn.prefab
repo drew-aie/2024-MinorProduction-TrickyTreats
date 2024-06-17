@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 4120314960500659140, guid: 5129fdd52bdb39647855c0498b849212,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid
+      value: ZombieHmn
       objectReference: {fileID: 0}
     - target: {fileID: 4343094274482167308, guid: 5129fdd52bdb39647855c0498b849212,
         type: 3}
@@ -227,5 +227,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: ea114c3c2442edb4bbd6811dad69b679, type: 2}
+    - target: {fileID: 7748483256883444324, guid: 5129fdd52bdb39647855c0498b849212,
+        type: 3}
+      propertyPath: _isMonster
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5129fdd52bdb39647855c0498b849212, type: 3}
