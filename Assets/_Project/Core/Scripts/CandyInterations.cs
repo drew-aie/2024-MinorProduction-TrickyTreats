@@ -116,12 +116,6 @@ public class CandyInterations : MonoBehaviour
 
 
         }
-        else
-        {
-            _rigidbody.useGravity = false;
-            _rigidbody.velocity = Vector3.zero;
-            gameObject.transform.position = _startingPosition;
-        }
         if (_childInteractions == null)
         {
             _childInteractions = FindObjectOfType<ChildManager>();
