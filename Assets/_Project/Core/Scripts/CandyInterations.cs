@@ -116,6 +116,12 @@ public class CandyInterations : MonoBehaviour
 
 
         }
+        else
+        {
+            _rigidbody.useGravity = false;
+            _rigidbody.velocity = Vector3.zero;
+            gameObject.transform.position = _startingPosition;
+        }
         if (_childInteractions == null)
         {
             _childInteractions = FindObjectOfType<ChildManager>();
@@ -127,13 +133,11 @@ public class CandyInterations : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Bowl"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
             gameObject.transform.position = _startingPosition;
-
-
         }
         else if (other.gameObject.CompareTag("Finish"))
         {

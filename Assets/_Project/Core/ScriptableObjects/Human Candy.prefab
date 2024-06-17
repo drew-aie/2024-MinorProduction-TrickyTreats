@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1551767735855810684}
   - component: {fileID: 1551767735855810682}
   - component: {fileID: 1551767735855810683}
-  - component: {fileID: 1551767735855810681}
+  - component: {fileID: 8997485183929785823}
   m_Layer: 0
   m_Name: Human Candy
   m_TagString: Candy
@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551767735855810690}
-  m_Mesh: {fileID: -9074290544161741494, guid: 90aadabfb366a5a448d7e0298be5f9ff, type: 3}
+  m_Mesh: {fileID: 3185889877229037913, guid: 44a3416a90347d34bb5202babee5a869, type: 3}
 --- !u!23 &1551767735855810687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a74a2b205df174d4bbeafcfe2f37be1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   _giveBaglocation: {fileID: 0}
   _doorInteraction: {fileID: 0}
   _mainCamera: {fileID: 0}
-  _childInteractions: {fileID: 278350007, guid: f2139d61cb40e694db6c3a2b7c612585,
-    type: 3}
+  _childInteractions: {fileID: 0}
+  _currentChild: {fileID: 0}
 --- !u!114 &1551767735855810683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ismonsterCandy: 0
---- !u!64 &1551767735855810681
+--- !u!64 &8997485183929785823
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,4 +162,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -9074290544161741494, guid: 90aadabfb366a5a448d7e0298be5f9ff, type: 3}
+  m_Mesh: {fileID: -8838100028761939199, guid: 44a3416a90347d34bb5202babee5a869, type: 3}
