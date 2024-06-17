@@ -50,7 +50,7 @@ public class DoorInteractionScript : MonoBehaviour
         _mouseClick = new InputAction(binding: "<Mouse>/leftButton");
         _currentCandyBag = Instantiate(_candyBagPrefab);
         _startPosition = _currentCandyBag.transform.position;
-        _currentCandyBag.SetActive(false);
+        _currentCandyBag.GetComponent<MeshRenderer>().enabled = false;
     }
     private void Start()
     {
@@ -84,14 +84,14 @@ public class DoorInteractionScript : MonoBehaviour
             if (hit.collider.gameObject == _door)
             {
 
-                if (!_isOpen && !_currentCandyBag.activeSelf && _mouseClick.triggered)
+                if (!_isOpen && !_currentCandyBag.GetComponent<MeshRenderer>().enabled && _mouseClick.triggered)
                 {
                     // Open the door
                     _audio.clip = _OpenSlowly;
                     _audio.Play();
                     _door.transform.DORotate(new Vector3(0, -90, 0), 1).onComplete = _pointsTimer.StartDecreasing;
                     // Spawn a new candy bag
-                    _currentCandyBag.SetActive(true);
+                    _currentCandyBag.GetComponent<MeshRenderer>().enabled = true;
                     _isBagDestroyed = false;
                     _isOpen = true;
                 }
@@ -106,7 +106,7 @@ public class DoorInteractionScript : MonoBehaviour
 
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), 1, RotateMode.Fast);
-            _currentCandyBag.SetActive(false);
+            _currentCandyBag.GetComponent<MeshRenderer>().enabled = false;
             _isBagDestroyed = false;
                 _isOpen = false;
           
@@ -117,7 +117,7 @@ public class DoorInteractionScript : MonoBehaviour
             _audio.Play();
             // Close the door
             _door.transform.DORotate(new Vector3(0, -180, 0), .25f, RotateMode.Fast).onComplete = TraumatizeCamera ;
-            _currentCandyBag.SetActive(false);
+            _currentCandyBag.GetComponent<MeshRenderer>().enabled = false;
             _isBagDestroyed = false;
             _isOpen = false;
 
