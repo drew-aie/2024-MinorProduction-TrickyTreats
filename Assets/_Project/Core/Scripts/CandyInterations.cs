@@ -132,6 +132,8 @@ public class CandyInterations : MonoBehaviour
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;
             gameObject.transform.position = _startingPosition;
+
+
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
