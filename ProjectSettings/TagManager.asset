@@ -13,14 +13,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Door
+  - Child
   - Water
   - UI
+  - Door
   - Bowl
   - Monster
-  - 'Human '
-  - 
-  - 
+  - Human
+  - UITimer
   - 
   - 
   - 
