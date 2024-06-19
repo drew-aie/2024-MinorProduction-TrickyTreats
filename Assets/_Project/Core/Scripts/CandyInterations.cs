@@ -127,7 +127,7 @@ public class CandyInterations : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Bowl"))
+        if (other.gameObject.CompareTag("Surface") || other.gameObject.CompareTag("Wall"))
         {
             _rigidbody.useGravity = false;
             _rigidbody.velocity = Vector3.zero;

@@ -286,9 +286,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f2690e17467de4e42b68697edf8fcb64, type: 2}
     - target: {fileID: -5392272341913085377, guid: 1b5531801a312f3468702424deb63a1e,
         type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5392272341913085377, guid: 1b5531801a312f3468702424deb63a1e,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b8da68fd9eb84742bcd05fb7857b86e, type: 2}
+      objectReference: {fileID: 2100000, guid: 95488f00edc833f4d84bde91a8e63ce3, type: 2}
+    - target: {fileID: -5392272341913085377, guid: 1b5531801a312f3468702424deb63a1e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc9e47678c4cce446b36b28a21f842b6, type: 2}
     - target: {fileID: -5357596481639946245, guid: 1b5531801a312f3468702424deb63a1e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -389,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 91905bc42600f08428b2239c12204ca9, type: 2}
+    - target: {fileID: -3420041302000474747, guid: 1b5531801a312f3468702424deb63a1e,
+        type: 3}
+      propertyPath: m_Name
+      value: Bowl
+      objectReference: {fileID: 0}
     - target: {fileID: -3398586867795999279, guid: 1b5531801a312f3468702424deb63a1e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -593,7 +608,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b8da68fd9eb84742bcd05fb7857b86e, type: 2}
+      objectReference: {fileID: 2100000, guid: 313f7110c32e8544c99f11cc3a601da7, type: 2}
     - target: {fileID: 1340940457181284783, guid: 1b5531801a312f3468702424deb63a1e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -699,6 +714,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 91905bc42600f08428b2239c12204ca9, type: 2}
+    - target: {fileID: 3389304254797006233, guid: 1b5531801a312f3468702424deb63a1e,
+        type: 3}
+      propertyPath: m_Name
+      value: BowlDisc
+      objectReference: {fileID: 0}
     - target: {fileID: 3406649647173473787, guid: 1b5531801a312f3468702424deb63a1e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

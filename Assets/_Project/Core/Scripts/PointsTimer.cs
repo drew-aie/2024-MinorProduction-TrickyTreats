@@ -78,7 +78,7 @@ public class PointsTimer : MonoBehaviour
         
         _childInteractions = FindObjectOfType<ChildController>();
         _localpoints = _maxPoints;
-        _doTweenMove = DOTween.To(() => _value, (x) => _value = x, _decreaseRate, 20).SetEase(Ease.InOutExpo);
+        _doTweenMove = DOTween.To(() => _value, (x) => _value = x, _decreaseRate, 600);
         _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
         _totalgivencandy = Mathf.Clamp(_totalgivencandy, 0, _maxkids);
         _value = Mathf.Clamp(_value, 0, 25);
@@ -183,6 +183,7 @@ public class PointsTimer : MonoBehaviour
             
             _Fade.Fading();
             _TotalPoints.text = ScoreManager.Instance.GetPoints.ToString();
+            _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
             _PointsDifference.text = "+" + _localpoints.ToString();
         }
 
@@ -195,7 +196,7 @@ public class PointsTimer : MonoBehaviour
         {
             if(_localpoints <= 0)
             {
-                ScoreManager.Instance.SetPoints = ScoreManager.Instance.GetPoints - _localpoints;
+                ScoreManager.Instance.SetPoints = ScoreManager.Instance.GetPoints - 500f;
             }
             else if (_localpoints > 0)
             {
@@ -206,6 +207,7 @@ public class PointsTimer : MonoBehaviour
             
             _Fade.Fading();
             _TotalPoints.text = ScoreManager.Instance.GetPoints.ToString();
+            _localpoints = Mathf.Clamp(_localpoints, 0, _maxPoints);
             _PointsDifference.text = "-" + _localpoints.ToString();
 
         }
