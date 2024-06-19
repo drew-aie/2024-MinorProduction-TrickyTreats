@@ -8543,6 +8543,30 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7352204
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 288
+      objectReference: {fileID: 0}
     - target: {fileID: 1556672442, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
       propertyPath: _human
       value: 
@@ -8760,6 +8784,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderShadows
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7352204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000033481
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.72699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3150181834946077413, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
