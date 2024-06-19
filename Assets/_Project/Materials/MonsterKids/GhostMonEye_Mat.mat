@@ -99,7 +99,7 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FlipbookHeight: 2
-    - _FlipbookTile: 0.45
+    - _FlipbookTile: 0
     - _FlipbookWidth: 4
     - _GlossMapScale: 0
     - _Glossiness: 0

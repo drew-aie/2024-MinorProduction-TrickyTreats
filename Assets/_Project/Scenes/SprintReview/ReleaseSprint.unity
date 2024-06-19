@@ -8543,6 +8543,30 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7352204
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556672439, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 288
+      objectReference: {fileID: 0}
     - target: {fileID: 1556672442, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
       propertyPath: _human
       value: 
@@ -8567,9 +8591,188 @@ PrefabInstance:
       propertyPath: _doorInteraction
       value: 
       objectReference: {fileID: 1323269030}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -57.596058
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -17.01322
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -18.62201
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fd535edd69c231459924f8b97b917ea,
+        type: 2}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.6074226
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6074226
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6603774
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 36.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 23.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_lineSpacingMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7184519176999348336, guid: 8fd535edd69c231459924f8b97b917ea,
+        type: 2}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4288388008
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 133557577986366152, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 978118523279156916, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -116.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 978118523279156916, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
+      objectReference: {fileID: 0}
     - target: {fileID: 2059966674816572778, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
       propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 28.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_colorMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ab659e3185b140649815c095030c318a,
+        type: 2}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.19339621
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.62477905
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8377889169401012997, guid: ab659e3185b140649815c095030c318a,
+        type: 2}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281442303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.b
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.g
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topRight.b
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topRight.g
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181833995307490, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topRight.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3150181833995307501, guid: 01d89171fdd757d48b8d0baa84de1b55,
@@ -8582,10 +8785,92 @@ PrefabInstance:
       propertyPath: m_RenderShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7352204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.0480747
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000033481
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.72699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181834932452357, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 3150181834946077413, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879120, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879120, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 26.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fd535edd69c231459924f8b97b917ea,
+        type: 2}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.6074226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6074226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6603774
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7184519176999348336, guid: 8fd535edd69c231459924f8b97b917ea,
+        type: 2}
+    - target: {fileID: 3150181835035879121, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3150181835363630464, guid: 01d89171fdd757d48b8d0baa84de1b55,
         type: 3}
@@ -8661,6 +8946,98 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119494321723780303, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17.099976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119494321723780303, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.5999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_colorMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ab659e3185b140649815c095030c318a,
+        type: 2}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.19339621
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.62477905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8377889169401012997, guid: ab659e3185b140649815c095030c318a,
+        type: 2}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281442303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.b
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topLeft.g
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topRight.b
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.topRight.g
+      value: 0.4292453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.b
+      value: 0.19339621
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.g
+      value: 0.62477905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.b
+      value: 0.19339621
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823882381465538234, guid: 01d89171fdd757d48b8d0baa84de1b55,
+        type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.g
+      value: 0.62477905
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d89171fdd757d48b8d0baa84de1b55, type: 3}
