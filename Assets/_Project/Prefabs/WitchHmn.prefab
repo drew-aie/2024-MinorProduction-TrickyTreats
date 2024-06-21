@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 2597783419423219914, guid: 16ad7ed3b2389374c8f5f59fd7258ec6,
         type: 3}
       propertyPath: m_Name
-      value: BaseKid_Mesh
+      value: WitchHmn
       objectReference: {fileID: 0}
     - target: {fileID: 2658816086779922890, guid: 16ad7ed3b2389374c8f5f59fd7258ec6,
         type: 3}
@@ -289,3 +289,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16ad7ed3b2389374c8f5f59fd7258ec6, type: 3}
+--- !u!1 &8636443588094123065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2597783419423219914, guid: 16ad7ed3b2389374c8f5f59fd7258ec6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6041545841235344627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4179719132744739003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636443588094123065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd65edebb89741f4c81efb06800fe053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isMonster: 0

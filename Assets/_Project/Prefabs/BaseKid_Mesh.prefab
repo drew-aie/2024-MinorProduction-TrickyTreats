@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195794860187715189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3396927096398051035}
   - component: {fileID: 7389346206553362634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 699025445406291111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: world_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3942734924147949894}
   - component: {fileID: 6763076576035378743}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Hair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4416421846305849061}
   - component: {fileID: 7984037307283619242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_BootHeel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7627508767750601830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cape_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5173795409772690447}
   - component: {fileID: 2485056089910912116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_UpArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8844787815821582813}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1631672757008745449}
   - component: {fileID: 14232736030898556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_CheekFurBtm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459571147872356065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_wrist_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4676219462242492578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointel_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3196668957097624354}
   - component: {fileID: 3988974587331965542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5695164503966360448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_wrist_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5687341370137854380}
   - component: {fileID: 2878010146471934908}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchHmn_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5945889456616470196}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WerewolfHmn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2196116941160912959}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020409060267363200}
   - component: {fileID: 8092908566915163308}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Hair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3107539587067942337}
   - component: {fileID: 5966581316568264528}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost_Hair_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299510138810520775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieHmn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,7 +1134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5488119260101733509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_shouldel_jnt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684730694720376002}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_ear_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6202311601852173123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7336567199159571579}
   - component: {fileID: 183260970645205000}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8342663126477979669}
   - component: {fileID: 1330342794589571301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Hair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1403,7 +1403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7555566881472628053}
   - component: {fileID: 3836235456080980344}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_Shorts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 695227381493027535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3415349932234472679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_were_Eal_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7581583495148131594}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_knee_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1585,7 +1585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7264674576199466307}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: joint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2263563646923427536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_elbow_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7649509076775303376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7965418971036749545}
   - component: {fileID: 3706986677554843367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,7 +1771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5750114332206027530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_clavical_ctrl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3056889411483913031}
   - component: {fileID: 9083495919287897271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 527240973436012532}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1924,7 +1924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8800200400412096344}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointer_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2157688179975944982}
   - component: {fileID: 7350994878874516537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Bolts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895731332549485764}
   - component: {fileID: 4926792155283978207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8089397601934042506}
   - component: {fileID: 4549472910179344953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_EarL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915631437173526553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_wrist_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2253,7 +2253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5036427047348395438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2294,7 +2294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7212786767325068021}
   - component: {fileID: 1641202593441001651}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5657981741428388235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: chest_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3159641072038053682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_wrist_ctrl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,7 +2449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8450728065113960809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_knee_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2480,7 +2480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143155290733491059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_shouldel_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2512,7 +2512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3935109028338459500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_heel_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2545,7 +2545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4911522451123951236}
   - component: {fileID: 1346388967074481932}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2634,7 +2634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2803574308620123479}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tail_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2666,7 +2666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4333326195657177990}
   - component: {fileID: 7302563145332246858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2754,7 +2754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503752295974644680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchHmn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,7 +2789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8464924912895647775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_foot_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2820,7 +2820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916326623329262}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,7 +2852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6472455875779050248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_thumb_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2884,7 +2884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2787596182140507848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2915,7 +2915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802393958224666834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: joint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2946,7 +2946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256071804468509746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_were_Ear_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,7 +2978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9001646495436948045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_elbow_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3010,7 +3010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2655471506392368312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3043,7 +3043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8884701371423846398}
   - component: {fileID: 2936971084053885975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_ShoeTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3132,7 +3132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7163488018165139825}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3164,7 +3164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6308427765937703641}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3196,7 +3196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6188996348915459279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_clavicar_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3231,7 +3231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8743117433704916378}
   - component: {fileID: 5904413933584265716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieHmn_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3319,7 +3319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1161899509905985038}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_heel_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3350,7 +3350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4010862016676082035}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_Arm_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3381,7 +3381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975323033622614229}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: neck_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2401468727320373566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Finger_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3448,7 +3448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4835354939662856978}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3481,7 +3481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6946323697566254906}
   - component: {fileID: 1965968233241502719}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Ribbon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3567,7 +3567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7659239546323381123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_ankle_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3600,7 +3600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7987870340741867138}
   - component: {fileID: 3337842215441626499}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3686,7 +3686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417207056490628462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3718,7 +3718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6272029074686203682}
   - component: {fileID: 1603462397306251194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieHmn_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3806,7 +3806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8910591571087081498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +3843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2286464382994035049}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_Arm_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,7 +3875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3406690462091623024}
   - component: {fileID: 8765924869156331530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BaseKid_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3920,7 +3920,7 @@ Animator:
   m_GameObject: {fileID: 2597783419423219914}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bc7f37cde054e34478f55c959b2b34c4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe730e7dd15c51c4babeed90196488fa, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3940,7 +3940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5778498454383095909}
   - component: {fileID: 9009054098076700821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4031,7 +4031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4775969689011865690}
   - component: {fileID: 6146950007703452214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4118,7 +4118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4324180631268739048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4151,7 +4151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7366862262391406468}
   - component: {fileID: 8171895205461162878}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4238,7 +4238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442495837872521916}
   - component: {fileID: 2789211968647508054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4324,7 +4324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5065445699323196096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointel_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4356,7 +4356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8267161498098273318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_wrist_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4387,7 +4387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1505320531870889154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_hip_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4419,7 +4419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5625762899912318862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4452,7 +4452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5237980595030516471}
   - component: {fileID: 2299047789442196401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4548,7 +4548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895347508440844575}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_knee_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4581,7 +4581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4758085359949428835}
   - component: {fileID: 3636997643226270412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_EarR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4670,7 +4670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5232316157576227028}
   - component: {fileID: 7688033104121364887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchMon_Clothes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4764,7 +4764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2984908977600539498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4796,7 +4796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4887918238045259419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_toe_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4776481126252736861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_clavical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4860,7 +4860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2442394420040482278}
   - component: {fileID: 6558013732144068416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skull_Pendant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4946,7 +4946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3061349597533183090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_heel_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,7 +4978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8753914776413584643}
   - component: {fileID: 7490947217701418855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5067,7 +5067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7041343863634133135}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cape_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5099,7 +5099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7358082392466965796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5131,7 +5131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7139302009949256220}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_were_Eal_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5163,7 +5163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3170094497978527819}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchMon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5198,7 +5198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1648861739527538940}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_palm_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5234,7 +5234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985217198426794078}
   - component: {fileID: 554088441958839102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5320,7 +5320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8399161149632052726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5352,7 +5352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429461757443740855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_shouldel_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5384,7 +5384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8478468898717007873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_elbow_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5416,7 +5416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8624038771215494063}
   - component: {fileID: 73699618567167938}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5508,7 +5508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1120105445747676020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_thumb_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5539,7 +5539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8618235571975981339}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_shoulder_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5571,7 +5571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2465900724522528881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_thumb_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5604,7 +5604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2190394655652279242}
   - component: {fileID: 2273291314300586931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Hair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5690,7 +5690,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5175449583492945609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_were_Eal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5722,7 +5722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518694929558038454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5754,7 +5754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1411626835398574379}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_toe_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5785,7 +5785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6217931554343711991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Finger_ctrl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5821,7 +5821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6691832293176650944}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_were_Ear_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5852,7 +5852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7019551357214668293}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tail_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5884,7 +5884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157201055397078096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_ear_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5916,7 +5916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6710889278308305703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_clavical_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5950,7 +5950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227984946069067779}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_heel_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5983,7 +5983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7787655246127514229}
   - component: {fileID: 2731137870439175765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6073,7 +6073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168690500916169608}
   - component: {fileID: 1043257015724763024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost_Ribbon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6160,7 +6160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2168209105401386583}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: joint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6192,7 +6192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6975386790049034690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_thumb_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6224,7 +6224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7980409365135515261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: neck_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6256,7 +6256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7004523831532799866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: core_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6292,7 +6292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543383049839894237}
   - component: {fileID: 8312540475861030378}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6381,7 +6381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7809712504036853095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6421,7 +6421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7019401777228690431}
   - component: {fileID: 279508858851483250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Vest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6513,7 +6513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2793754398909067237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_elbow_ctrl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6546,7 +6546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2504753129310199977}
   - component: {fileID: 8205551298562586320}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Bolts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6633,7 +6633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013096442153204771}
   - component: {fileID: 8746811746181144562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_WristWarmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6722,7 +6722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5337424814499827838}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_toe_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6753,7 +6753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6797648141269052792}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_elbow_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6786,7 +6786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5117288704913945378}
   - component: {fileID: 6440256448593195459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_UpArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6875,7 +6875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2328289044987037717}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6907,7 +6907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1917527827530253036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: nurbsCircle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6938,7 +6938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767175182758745802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: neck_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6970,7 +6970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456008089657659066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_wrist_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7002,7 +7002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897747537591456591}
   - component: {fileID: 3943092553979178408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7088,7 +7088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3011843259692004661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pointer_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7121,7 +7121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3051432580822832044}
   - component: {fileID: 8571122437827270902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Hair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7207,7 +7207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6796121196540270568}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_IKFK_Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7239,7 +7239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7121258092362412602}
   - component: {fileID: 287090932520533515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7327,7 +7327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6203039719046798722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7359,7 +7359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6231938990076169172}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_wrist_ctrl_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7390,7 +7390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1647804104588480768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_shoulder_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7422,7 +7422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2966042366681518297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_toe_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7454,7 +7454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6432248042594698840}
   - component: {fileID: 8322314261423573053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchHmn_Dress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7553,7 +7553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2610934366097414880}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_thumb_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7584,7 +7584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6905627484183412659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Skeleton___Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7628,7 +7628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6011625813996006186}
   - component: {fileID: 3274955831596770256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Torso_Bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7721,7 +7721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2670227107729061367}
   - component: {fileID: 5576166273079190524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7807,7 +7807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8565389628915985262}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7839,7 +7839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8140179819969801163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7871,7 +7871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7766944888642943876}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7903,7 +7903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7591310286989167524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_IKFK_Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7934,7 +7934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7978756833778588648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BodySeperate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7980,7 +7980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766633503514381200}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_elbow_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8013,7 +8013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8473111654165796444}
   - component: {fileID: 1133225144422637678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8112,7 +8112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7210706576113093637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_leg_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8143,7 +8143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8255621965090207881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_ear_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8175,7 +8175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299315005981119356}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_knee_ctrl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8206,7 +8206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087215284246981132}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8238,7 +8238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 704552841153133414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_thumb_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8270,7 +8270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993328206339960485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_thumb_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8301,7 +8301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5050535366620522929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tail_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8332,7 +8332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8469811553017977226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointel_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8364,7 +8364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8317064798322812154}
   - component: {fileID: 665664566514499605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_BootToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8451,7 +8451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6307593842409123843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tail_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8484,7 +8484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7707065331644190439}
   - component: {fileID: 2853277601628741251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GhostCloak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8583,7 +8583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60692938702847639}
   - component: {fileID: 4038759561666226676}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8683,7 +8683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972576509639209615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_palm_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8719,7 +8719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3679427076477788517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8751,7 +8751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8548010963193154457}
   - component: {fileID: 3064566957917236222}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8842,7 +8842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883876479958505096}
   - component: {fileID: 2124537533183224977}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8942,7 +8942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2400583494631937877}
   - component: {fileID: 4391259824339283767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost_Hair_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9028,7 +9028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8837479588878587235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_foot_ctrl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9061,7 +9061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8004002494219131297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointer_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9094,7 +9094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6784850013388870093}
   - component: {fileID: 1061403899860473902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_HairStrand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9180,7 +9180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9138749153319062990}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9212,7 +9212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 538531202757384882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_leg_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9247,7 +9247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7490356923201360758}
   - component: {fileID: 9113811371721692247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Ears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9338,7 +9338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5409445410806079376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_thumb_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9370,7 +9370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4555923041803311612}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_middle_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9402,7 +9402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5907948739002842946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9436,7 +9436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788206204046731064}
   - component: {fileID: 4018196010873913965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: R_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9525,7 +9525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8424760664185883172}
   - component: {fileID: 1936040678807395358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_ChestTuft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9611,7 +9611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4572322226934711576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9652,7 +9652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025997834153981010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_jnt_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9683,7 +9683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2267688270523468947}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_wrist_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9714,7 +9714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4879254516578264436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_pinkie_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9745,7 +9745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4414538836344199883}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_elbow_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9777,7 +9777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529404110951440982}
   - component: {fileID: 6004880496423144213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieHmn_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9869,7 +9869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185645698115085327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_wrist_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9900,7 +9900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3337315429713880945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_leg_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9934,7 +9934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908342745692590096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,7 +9975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4033816174321069617}
   - component: {fileID: 3581881767804713093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost_Hair_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10061,7 +10061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760430668405525021}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointel_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10094,7 +10094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186506272817357408}
   - component: {fileID: 8234084992910897412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10183,7 +10183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7760592569214843861}
   - component: {fileID: 584798406490067455}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10275,7 +10275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6289021365705937957}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_elbow_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10308,7 +10308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8631976041498343329}
   - component: {fileID: 2416604753839829217}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +10397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479288815528441964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tail_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10429,7 +10429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6205504947503581310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10462,7 +10462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616534189333671138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: core_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10495,7 +10495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5693244086540107718}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_leg_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10527,7 +10527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7389389955012081470}
   - component: {fileID: 3507570428395169822}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_ChestTuft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10613,7 +10613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2705412689489805763}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_elbow_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10646,7 +10646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3554265647133214258}
   - component: {fileID: 2837918672882799134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_LegWarmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10733,7 +10733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751336772359954437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tail_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10765,7 +10765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 214074662700571432}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_shoulder_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10797,7 +10797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 694271742378418322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_toe_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10829,7 +10829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4273361692668380626}
   - component: {fileID: 1543227297317437277}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10920,7 +10920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4650480035700099310}
   - component: {fileID: 5354317078182037587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_CheekFurTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11006,7 +11006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706020010217147918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_foot_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11039,7 +11039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8772779562434842288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_elbow_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11072,7 +11072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553376055989617952}
   - component: {fileID: 7957463332671752800}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bucket_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11158,7 +11158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2179420256330800389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_thumb_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11189,7 +11189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6061797379396278383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11220,7 +11220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1012612341925892316}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_jnt_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11252,7 +11252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3682566238106942264}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_wrist_ctrl_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11283,7 +11283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 244501605994783981}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_toe_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11314,7 +11314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2394077139250748755}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WerewolfMon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11358,7 +11358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124025194032207612}
   - component: {fileID: 8950435089042618729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchMon_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11445,7 +11445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3658801571630234729}
   - component: {fileID: 7206573719446968506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11534,7 +11534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2270814359954415956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pointer_ctrl_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11566,7 +11566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666823050986792905}
   - component: {fileID: 7062815756160096839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GhostHood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11655,7 +11655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420704612600028134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11687,7 +11687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3813371491966747540}
   - component: {fileID: 5980569948250622025}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchMon_Earrings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11773,7 +11773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808576791739620176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_shoulder_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11805,7 +11805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8079215332223201272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cape_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11837,7 +11837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6087763646979404936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: joint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11869,7 +11869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5635147589057269746}
   - component: {fileID: 4432778755305981841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vampire_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11974,7 +11974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4985159925677001765}
   - component: {fileID: 8571405911264023784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieMon_Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12062,7 +12062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3075524913866810166}
   - component: {fileID: 6678087885939619232}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12148,7 +12148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5367083936319771979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_thumb_jnt_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12181,7 +12181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6274169207954451865}
   - component: {fileID: 8120966351602733619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieHmn_Flannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12274,7 +12274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107928593442064790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_shoulder_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12307,7 +12307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6981216904029747616}
   - component: {fileID: 1100957687308942428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ghost_Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12397,7 +12397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5095670897534784301}
   - component: {fileID: 460988389074030015}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchHmn_Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12483,7 +12483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1816014555194313796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_pinkie_ctrl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12516,7 +12516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607684867049921731}
   - component: {fileID: 6063160259484242361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchMon_Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12602,7 +12602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7607631523792008407}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_ankle_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12635,7 +12635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6823841835893680796}
   - component: {fileID: 6646986843983260556}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereHmn_Flannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12731,7 +12731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904625239687727256}
   - component: {fileID: 2658816086779922890}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ears_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12817,7 +12817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144455582252581855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_foot_ik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12848,7 +12848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6685603292984896643}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: chest_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12884,7 +12884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6962346579729709813}
   - component: {fileID: 784197092136019153}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WereMnstr_Shorts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12972,7 +12972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262387890666550652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_hip_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13005,7 +13005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731975521526778405}
   - component: {fileID: 9079038613727078334}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenMon_Boot_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13094,7 +13094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8743829127296448584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13126,7 +13126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 747428977631739652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tail_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13159,7 +13159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270715776122664247}
   - component: {fileID: 5116538287181028092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WitchHmn_Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13247,7 +13247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6256567533735680204}
   - component: {fileID: 4832243668834006993}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Torso_Top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13337,7 +13337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4583808360197371756}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: l_middle_jnt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13369,7 +13369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561035083673632078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_were_Ear_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13402,7 +13402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894867200033739161}
   - component: {fileID: 7539483176536921552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrankenHmn_Collar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13492,7 +13492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2204273352313988538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: r_ear_ctrl_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
