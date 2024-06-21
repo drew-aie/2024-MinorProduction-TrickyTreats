@@ -115,7 +115,6 @@ public class PointsTimer : MonoBehaviour
         if (_totalgivencandy == _maxkids)
         {
             _doorInteraction.GetComponent<Collider>().enabled = false;
-            _Kids.text = "<s>" + "Children in " + "<br>" + "Neighbourhood: " + "<br>" + _totalgivencandy.ToString() + "/" + _maxkids + "<s>";
             StopDecreasingPoints();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

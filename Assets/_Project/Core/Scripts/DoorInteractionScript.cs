@@ -91,7 +91,7 @@ public class DoorInteractionScript : MonoBehaviour
                     _audio.Play();
                     _door.transform.DORotate(new Vector3(0, -90, 0), 1).onComplete = _pointsTimer.StartDecreasing;
                     // Spawn a new candy bag
-                    _currentCandyBag.SetActive(true);
+                    _currentCandyBag.SetActive(false);
                     _isBagDestroyed = false;
                     _isOpen = true;
                 }
