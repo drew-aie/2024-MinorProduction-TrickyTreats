@@ -86,6 +86,8 @@ public class ChildManager : MonoBehaviour
     {
         if (_canSpawn == false && _isChildSpawned == true)
         {
+            //Set current to be previous
+            _previousChild = _currentChild;
             //Set child to inactive
             _currentChild.SetActive(false);
             //Set child to spawn
